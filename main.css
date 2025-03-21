@@ -17,7 +17,7 @@ header {
   height: 15vh;
 }
 
-.header-menu {
+.nav-menu {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,9 +66,9 @@ li a {
   align-items: center;
 }
 
-.hero-h1 {
+.hero-title {
   margin-bottom: 10rem;
-  font-size: 2.5rem; /* Ajuste para maior sem distorção */
+  font-size: 2.3rem; /* Ajuste para maior sem distorção */
   font-weight: 700; /* Deixa o texto mais encorpado */
   letter-spacing: 2px; /* Aumenta o espaço entre as letras */
   line-height: 1.3; /* Mantém um bom espaçamento entre as linhas */
@@ -78,4 +78,52 @@ li a {
 
 .highlight {
   color: #BB9867;
+}
+
+.sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10em;
+  background-color: #000000;
+  color: white;
+  padding-bottom: 13em;
+  padding-left: 12em;
+}
+
+.sobre-img {
+  position: relative;
+  margin-top: -100px;
+}
+
+.sobre-textos {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-right: 7em;
+}
+.sobre-textos h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sobre-textos p {
+  font-size: 23px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.container {
+  background-color: #1F1F1F;
+}
+
+.line {
+  height: 2px;
+  width: 100%;
+  background-color: gray;
+}
+
+.serviços-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }/*# sourceMappingURL=main.css.map */
