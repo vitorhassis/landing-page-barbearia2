@@ -1,4 +1,5 @@
 @import 'partes/colors';
+@import "tailwindcss";
 
 * {
     margin: 0;
@@ -124,7 +125,8 @@ header {
 }
 
 .container {
-    background-color: #1F1F1F;
+    background-color: $background-gray;
+    padding-bottom: 80px;
 }
 
 .line {
@@ -133,9 +135,49 @@ header {
     background-color: gray;
 }
 
+.serviços-textos {
+    text-align: center;
+    justify-content: center;
+    padding: 35px;
+
+    h1 {
+        font-size: 38px;
+        color: $white;
+        padding-bottom: 12px;
+    }
+
+    p {
+        color: $white-subtitulo;
+        font-size: 20px;
+    }
+
+}
+
 
 .serviços-grid {
     display: flex;
     justify-content: center;
     gap: 30px;
+}
+
+.localizacao {
+    background-color: $background-gray;
+}
+
+.localizacao-textos {
+    text-align: center;
+    justify-content: center;
+
+    h1 {
+        padding-top: 35px;
+        font-size: 38px;
+        color: $white;
+        padding-bottom: 12px;
+    }
+
+    p {
+        color: $white-subtitulo;
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
 }
