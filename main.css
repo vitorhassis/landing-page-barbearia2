@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import "tailwindcss";
-
 * {
   margin: 0;
   padding: 0;
@@ -79,7 +77,7 @@ li a {
 }
 
 .highlight {
-  color: #bb9867;
+  color: #BB9867;
 }
 
 .sobre {
@@ -115,7 +113,7 @@ li a {
 }
 
 .container {
-  background-color: #1f1f1f;
+  background-color: #1F1F1F;
   padding-bottom: 80px;
 }
 
@@ -136,7 +134,7 @@ li a {
   padding-bottom: 12px;
 }
 .serviços-textos p {
-  color: #e0e0e0;
+  color: #E0E0E0;
   font-size: 20px;
 }
 
@@ -146,8 +144,12 @@ li a {
   gap: 30px;
 }
 
+.galeria {
+  background-color: #000000;
+}
+
 .localizacao {
-  background-color: #1f1f1f;
+  background-color: #1F1F1F;
 }
 
 .localizacao-textos {
@@ -161,7 +163,32 @@ li a {
   padding-bottom: 12px;
 }
 .localizacao-textos p {
-  color: #e0e0e0;
+  color: #E0E0E0;
   font-size: 20px;
-  margin-bottom: 35px;
-} /*# sourceMappingURL=main.css.map */
+  padding-bottom: 38px;
+  padding-top: 8px;
+}
+
+#localizacao-textos-p {
+  color: #E0E0E0;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 38px;
+}
+
+.contato, .container {
+  background-color: #000000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5em 0 5em;
+}
+
+.container-infos h2 {
+  color: #BB9867;
+}
+.container-infos p {
+  color: #E0E0E0;
+}/*# sourceMappingURL=main.css.map */
