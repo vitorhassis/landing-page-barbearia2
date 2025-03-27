@@ -1,0 +1,80 @@
+.contato,
+.container {
+  background-color: #000000;
+}
+
+.contato {
+  padding-bottom: 5em;
+
+  .contato-h1 {
+    padding-bottom: 100px;
+
+    h1 {
+      padding-top: 50px;
+      padding-bottom: 15px;
+      font-size: 40px;
+      text-align: center;
+      color: $white;
+    }
+
+    .linha {
+      height: 2px;
+      width: 80px;
+      margin: -10px auto 0 auto;
+      background-color: $highlight;
+      border-radius: 2px;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20em;
+
+    .container-infos {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      h2 {
+        font-size: 20px;
+        color: $highlight;
+      }
+
+      p {
+        font-size: 18px;
+        color: $white-subtitulo;
+      }
+    }
+
+    .container-forms {
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        input,
+        textarea {
+          width: 377px;
+          padding: 15px;
+          border: 1px solid gray;
+          border-radius: 2px;
+          outline: none;
+          background-color: $background-gray;
+        }
+
+        button {
+          width: 180px;
+          height: 40px;
+          border: none;
+          border-radius: 20px;
+          justify-content: center;
+          text-align: center;
+          color: $white;
+          background-color: $red-button;
+        }
+      }
+    }
+  }
+}

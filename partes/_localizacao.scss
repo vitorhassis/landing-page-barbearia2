@@ -1,0 +1,36 @@
+.localizacao {
+  background-color: $background-gray;
+
+  .localizacao-textos {
+    text-align: center;
+    justify-content: center;
+
+    h1 {
+      padding-top: 35px;
+      padding-bottom: 15px;
+      font-size: 38px;
+      color: $white;
+    }
+
+    p {
+      padding-bottom: 38px;
+      font-size: 20px;
+      color: $white-subtitulo;
+    }
+
+    #localizacao-textos-p {
+      padding-top: 30px;
+      padding-bottom: 38px;
+      font-size: 20px;
+      color: $white-subtitulo;
+    }
+  }
+}
+
+.line {
+  height: 2px;
+  width: 100%;
+  background-color: gray;
+}
+
+  

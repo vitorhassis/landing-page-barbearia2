@@ -4,52 +4,142 @@
 /* ========== GRAYS ========== */
 /* ========== REDS ========== */
 /* ========== ACCENTS ========== */
-/* ========== RESET ========== */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* ========== HEADER ========== */
+.galeria {
+  background-color: #000000;
+  padding-bottom: 5em;
+}
+
+.galeria-textos {
+  position: relative;
+  text-align: center;
+  padding: 30px;
+  z-index: 2;
+}
+.galeria-textos h1 {
+  color: #ffffff;
+  font-size: 38px;
+  padding-bottom: 15px;
+}
+.galeria-textos p {
+  font-size: 20px;
+  color: #e0e0e0;
+  margin-top: 8px;
+}
+.galeria-textos .galeria-bg-title {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  font-size: 150px;
+  color: rgba(69, 68, 68, 0.0901960784);
+  z-index: 0;
+}
+
+.galeria-carrossel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.galeria-carrossel button {
+  font-size: 2.5em;
+  color: white;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.galeria-carrossel .carrossel-wrapper {
+  display: flex;
+  gap: 100px;
+}
+.galeria-carrossel .carrossel-wrapper .carrossel-itens {
+  position: relative;
+  text-align: center;
+  justify-items: center;
+  border: 1px solid #CDCDCD;
+}
+.galeria-carrossel .carrossel-wrapper .carrossel-itens img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 35%;
+     object-position: 0% 35%;
+  display: block;
+}
+.galeria-carrossel .carrossel-wrapper .carrossel-itens .detalhe-circulo {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42px;
+  height: 42px;
+  background-color: #bb9867;
+  border-radius: 100px;
+}
+.galeria-carrossel .carrossel-wrapper .carrossel-itens .detalhe-circulo .detalhe-quadrado {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #e0e0e0;
+  top: 39%;
+  left: 39%;
+}
+.galeria-carrossel .carrossel-wrapper .carrossel-itens .carrossel-itens-textos {
+  padding: 50px;
+}
+.galeria-carrossel .carrossel-wrapper .carrossel-itens .carrossel-itens-textos h3 {
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+.galeria-carrossel .carrossel-wrapper .carrossel-itens .carrossel-itens-textos p {
+  font-size: 12px;
+  color: #e0e0e0;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 header {
   padding: 0 100px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 15vh;
   background-color: #000000;
   text-align: center;
 }
-
-#header-img {
+header #header-img {
   width: auto;
   height: 15vh;
 }
-
-.header-menu {
+header .header-menu {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.header-menu ul {
+header .header-menu ul {
   display: flex;
   gap: 40px;
 }
-
-li a {
+header .header-menu ul li a {
   font-weight: bold;
   font-family: "Sora", sans-serif;
   color: #edeaef;
   text-decoration: none;
 }
-
-.header-button {
+header .header-button {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
 }
-.header-button a {
+header .header-button a {
   font-family: "Sora", sans-serif;
   color: #edeaef;
   text-decoration: none;
@@ -58,13 +148,11 @@ li a {
   border-radius: 5px;
   transition: background-color 0.3s ease, border 0.3s ease;
 }
-
-.header-button a:hover {
+header .header-button a:hover { /*forma do Sass usar o hover*/
   border: 1px solid #8a1414;
   background-color: #8a1414;
 }
 
-/* ========== HERO ========== */
 .hero {
   height: 100vh;
   background: url("./assets/imagens/banner.png") no-repeat center center/cover;
@@ -72,8 +160,7 @@ li a {
   justify-content: center;
   align-items: center;
 }
-
-.hero-title {
+.hero .hero-title {
   margin-bottom: 10rem;
   font-size: 2.3rem;
   font-weight: 700;
@@ -82,12 +169,10 @@ li a {
   color: white;
   text-align: center;
 }
-
-.highlight {
+.hero .hero-title .highlight {
   color: #bb9867;
 }
 
-/* ========== SOBRE ========== */
 .sobre {
   display: flex;
   align-items: center;
@@ -98,32 +183,48 @@ li a {
   padding-left: 12em;
   padding-bottom: 13em;
 }
-
-.sobre-img {
+.sobre .sobre-img {
   position: relative;
   margin-top: -100px;
 }
-
-.sobre-textos {
+.sobre .sobre-textos {
   max-width: 800px;
   margin: 0 auto;
   padding-right: 7em;
 }
-.sobre-textos h1 {
+.sobre .sobre-textos h1 {
   font-size: 40px;
   text-align: center;
   margin-bottom: 20px;
 }
-.sobre-textos p {
+.sobre .sobre-textos p {
   font-size: 23px;
   line-height: 150%;
   text-align: center;
 }
 
-/* ========== SERVIÇOS ========== */
 .servicos-container {
   background-color: #1f1f1f;
   padding-bottom: 80px;
+}
+.servicos-container .serviços-textos {
+  text-align: center;
+  justify-content: center;
+  padding: 35px;
+}
+.servicos-container .serviços-textos h1 {
+  font-size: 38px;
+  color: #ffffff;
+  padding-bottom: 12px;
+}
+.servicos-container .serviços-textos p {
+  font-size: 20px;
+  color: #e0e0e0;
+}
+.servicos-container .serviços-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 .line {
@@ -132,62 +233,37 @@ li a {
   background-color: gray;
 }
 
-.serviços-textos {
-  text-align: center;
-  justify-content: center;
-  padding: 35px;
-}
-.serviços-textos h1 {
-  font-size: 38px;
-  color: #ffffff;
-  padding-bottom: 12px;
-}
-.serviços-textos p {
-  font-size: 20px;
-  color: #e0e0e0;
-}
-
-.serviços-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-/* ========== GALERIA ========== */
-.galeria {
-  background-color: #000000;
-}
-
-/* ========== LOCALIZAÇÃO ========== */
 .localizacao {
   background-color: #1f1f1f;
 }
-
-.localizacao-textos {
+.localizacao .localizacao-textos {
   text-align: center;
   justify-content: center;
 }
-.localizacao-textos h1 {
+.localizacao .localizacao-textos h1 {
   padding-top: 35px;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
   font-size: 38px;
   color: #ffffff;
 }
-.localizacao-textos p {
-  padding-top: 8px;
+.localizacao .localizacao-textos p {
   padding-bottom: 38px;
   font-size: 20px;
   color: #e0e0e0;
 }
-
-#localizacao-textos-p {
+.localizacao .localizacao-textos #localizacao-textos-p {
   padding-top: 30px;
   padding-bottom: 38px;
   font-size: 20px;
   color: #e0e0e0;
 }
 
-/* ========== CONTATO ========== */
+.line {
+  height: 2px;
+  width: 100%;
+  background-color: gray;
+}
+
 .contato,
 .container {
   background-color: #000000;
@@ -196,51 +272,57 @@ li a {
 .contato {
   padding-bottom: 5em;
 }
-.contato h1 {
+.contato .contato-h1 {
+  padding-bottom: 100px;
+}
+.contato .contato-h1 h1 {
   padding-top: 50px;
   padding-bottom: 15px;
   font-size: 40px;
   text-align: center;
   color: #ffffff;
 }
-.contato .linha {
+.contato .contato-h1 .linha {
   height: 2px;
   width: 80px;
   margin: -10px auto 0 auto;
   background-color: #bb9867;
   border-radius: 2px;
 }
-.contato .contato-h1 {
-  padding-bottom: 100px;
-}
-
-.container {
+.contato .container {
   display: flex;
   justify-content: space-between;
   padding: 0 20em;
 }
-
-.container-infos {
+.contato .container .container-infos {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.container-infos h2 {
+.contato .container .container-infos h2 {
   font-size: 20px;
   color: #bb9867;
 }
-.container-infos p {
+.contato .container .container-infos p {
   font-size: 18px;
   color: #e0e0e0;
 }
-
-.container-forms form {
+.contato .container .container-forms form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-.container-forms button {
+.contato .container .container-forms form input,
+.contato .container .container-forms form textarea {
+  width: 377px;
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  outline: none;
+  background-color: #1f1f1f;
+}
+.contato .container .container-forms form button {
   width: 180px;
   height: 40px;
   border: none;
@@ -249,15 +331,6 @@ li a {
   text-align: center;
   color: #ffffff;
   background-color: #8a1414;
-}
-.container-forms input,
-.container-forms textarea {
-  width: 377px;
-  padding: 15px;
-  border: 1px solid gray;
-  border-radius: 2px;
-  outline: none;
-  background-color: #1f1f1f;
 }
 
 footer {
