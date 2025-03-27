@@ -1,13 +1,18 @@
-$black-dark: #000000;
+/* ========== BASE COLORS ========== */
+$black-dark:       #000000;
+$white:            #ffffff;
 
-$red-button: #d34040;
+/* ========== WHITE VARIANTS ========== */
+$white-dark:       #edeaef;
+$white-subtitulo:  #e0e0e0;
 
-$white: #ffffff;
-$white-dark: #edeaef;
-$white-subtitulo: #E0E0E0;
+/* ========== GRAYS ========== */
+$gray:             #929085;
+$background-gray:  #1f1f1f;
+$gray-footer: #CCCCCC;
 
-$background-gray: #1F1F1F;
+/* ========== REDS ========== */
+$red-button:       #8a1414; 
 
-
-$gray: #928585;
-$highlight: #BB9867;
+/* ========== ACCENTS ========== */
+$highlight:        #bb9867;
