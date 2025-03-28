@@ -12,7 +12,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="main.css" />
+
   </head>
 
   <body>
@@ -54,7 +59,7 @@
 
       <!---SOBRE-->
 
-      <section class="sobre">
+      <section class="sobre" id="sobre">
         <div class="sobre-img">
           <img src="assets/imagens/imagesCortes.svg" alt="imagem de cortes" />
         </div>
@@ -76,7 +81,7 @@
 
       <!---SERVIÇOS-->
 
-      <section class="serviços">
+      <section class="serviços" id="servicos">
         <div class="servicos-container">
           <div class="serviços-textos">
             <h1>O que nós fornecemos</h1>
@@ -100,7 +105,7 @@
 
       <!--- GALERIA -->
 
-      <section class="galeria">
+      <section class="galeria" id="galeria">
         <div class="galeria-textos">
           <h1>Galeria</h1>
           <p>Os cortes que mais saem.</p>
@@ -109,9 +114,9 @@
 
         <div class="galeria-carrossel">
 
-          <button><</button>
+          <button id="buttonLeft"><</button>
 
-        <div class="carrossel-container">
+        <div class="carrossel-container" id="carrossel-container">
           <div class="carrossel-wrapper">
             <div class="carrossel-itens">
               <img src="assets/imagens/aaaaaaasssssdadsa.png" alt="imagem corte low fade">
@@ -141,13 +146,36 @@
                 <div class="detalhe-quadrado"></div>
               </div>
               <div class="carrossel-itens-textos">
+                <h3>Low Fade</h3>
+                <p>Fino no corte, firme na presença. O low fade é pra quem representa na humildade e no estilo.</p>
+              </div>
+            </div>
+
+            <div class="carrossel-itens">
+              <img src="assets/imagens/sdasdsadasdassdaddd.png" alt="imagem corte low fade">
+              <div class="detalhe-circulo">
+                <div class="detalhe-quadrado"></div>
+              </div>
+              <div class="carrossel-itens-textos">
                 <h3>Moicano</h3>
                 <p>Estilo e atitude em cada detalhe. O moicano é para quem não passa despercebido</p>
               </div>
             </div>
+
+            <div class="carrossel-itens">
+              <img src="assets/imagens/corte3.jpg" alt="imagem corte low fade">
+              <div class="detalhe-circulo">
+                <div class="detalhe-quadrado"></div>
+              </div>
+              <div class="carrossel-itens-textos">
+                <h3></h3>
+                <p>Estilo e atitude em cada detalhe. O moicano é para quem não passa despercebido</p>
+              </div>
+            </div>
+
           </div>
         </div>
-        <button>></button>
+        <button id="buttonRight">></button>
         </div>
 
       </section>
@@ -156,7 +184,7 @@
 
       <!--- LOCALIZACAO -->
 
-      <section class="localizacao">
+      <section class="localizacao" id="localizacao">
         <div class="localizacao-textos">
           <h1>Venha nos fazer uma visita</h1>
           <p>Esperamos por você.</p>
@@ -181,7 +209,7 @@
 
       <!---CONTATO-->
 
-      <section class="contato">
+      <section class="contato" id="contato">
         <div class="contato-h1">
           <h1>Contato</h1>
         <div class="linha"></div>
@@ -189,23 +217,38 @@
         
           <div class="container">
             <div class="container-infos">
-              <div>
-                <h2>LOCAL</h2>
-                <p>R. Alagoas, 622 - Centro, Colorado - PR</p>
-              </div>
-              <div>
-                <h2>TELEFONE</h2>
-              <p>(44) 0000-0000</p>
-              </div>
-              <div>
-                <h2>EMAIL</h2>
-                <p>user@gmail.com</p>
-              </div>
-              <div>
-                <h2>HORÁRIOS</h2>
-              <p>08:00-19:00</p>
+
+              <div class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                 <div>
+                    <h2>LOCAL</h2>
+                    <p>R. Alagoas, 622 - Centro, Colorado - PR</p>
+                </div>
               </div>
               
+              <div class="info-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <h2>TELEFONE</h2>
+                <p>(44) 0000-0000</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <h2>EMAIL</h2>
+                  <p>user@gmail.com</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                  <h2>HORÁRIOS</h2>
+                <p>08:00-19:00</p>
+                </div>
+              </div>
             </div>
 
               <div class="container-forms">
@@ -238,4 +281,5 @@
     </section>
   </footer>
 
+  <script src="/index.js"></script>
 </html>

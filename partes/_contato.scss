@@ -36,6 +36,16 @@
       flex-direction: column;
       gap: 30px;
 
+      .info-item {
+        display: flex;
+        color: $highlight;
+
+        i {
+          padding-right: 20px;
+          padding-top: 10px;
+        }
+      }
+
       h2 {
         font-size: 20px;
         color: $highlight;
@@ -57,14 +67,20 @@
         input,
         textarea {
           width: 377px;
-          padding: 15px;
+          padding: 10px;
           border: 1px solid gray;
           border-radius: 2px;
           outline: none;
           background-color: $background-gray;
         }
 
+        textarea {
+          padding-bottom: 80px;
+        }
+
         button {
+          font-family: 'Sora', sans-serif;
+          font-weight: 800;
           width: 180px;
           height: 40px;
           border: none;

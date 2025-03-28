@@ -21,11 +21,17 @@ header {
       display: flex;
       gap: 40px;
 
-      li a {
+      li {
+        a {
         font-weight: bold;
         font-family: "Sora", sans-serif;
         color: $white-dark;
         text-decoration: none;
+
+        &:hover {
+          color: rgb(175, 175, 175);
+        }
+        }
       }
     }
   }
