@@ -1,16 +1,38 @@
-body, html {
+body,
+html {
   overflow-x: hidden;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Sora', sans-serif;
-  }
-    
-p, span, li, a {
-    font-family: 'Sora', sans-serif !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sora", sans-serif;
 }
 
+p,
+span,
+li,
+a {
+  font-family: "Sora", sans-serif !important;
+}
 
+.btn-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 70px;
+  z-index: 99;
 
+  img {
+    max-width: 74px;
+    transition: transform 0.4s;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+
+  }
+}
 

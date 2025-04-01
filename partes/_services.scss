@@ -24,10 +24,56 @@
     justify-content: center;
     gap: 30px;
   }
-}
+
+  .imagem-wrapper {
+    position: relative;
+    height: 342px;
+  }
+
+
+  .info-hover {
+    height: 302px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
+    color: white;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+  
+    opacity: 0;
+    transition: opacity 0.4s ease;
+
+    .info-hover-text {
+      padding-bottom: 30px;
+    }
+
+    p {
+      font-size: 14px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    span {
+      color: $highlight;
+    }
+  }
+  
+  .imagem-wrapper:hover .info-hover {
+    opacity: 1;
+    border: none;
+  }
+
+  
 
 .line {
   height: 2px;
   width: 100%;
   background-color: gray;
+}
 }
