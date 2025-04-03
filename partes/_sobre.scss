@@ -33,4 +33,34 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+
+.sobre {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   
+}
+
+.sobre-img {
+  img {
+    width: 30em;
+  }
+}
+
+.sobre .sobre-textos {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.sobre .sobre-textos h1 {
+  font-size: 38px;
+}
+
+.sobre .sobre-textos p {
+  font-size: 18px;
+}
+
+}

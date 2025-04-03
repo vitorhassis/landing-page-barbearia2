@@ -33,4 +33,39 @@
   background-color: gray;
 }
 
+@media screen and (max-width: 1024px) {
+  .localizacao {
+    padding: 4rem 2rem;
+
+    iframe {
+      height: 350px;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 768px) {
+  .localizacao {
+    padding: 3rem 1.5rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    iframe {
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
   
+  .localizacao {
+    padding: 0;
+  }
+
+}

@@ -71,9 +71,51 @@
 
   
 
-.line {
-  height: 2px;
-  width: 100%;
-  background-color: gray;
+  .line {
+    height: 2px;
+    width: 100%;
+    background-color: gray;
+  }
 }
+
+@media screen and (max-width: 1024px) {
+  .servicos {
+    padding: 4rem 2rem;
+
+    .servicos-container {
+      .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 768px) {
+  .servicos {
+    padding: 3rem 1.5rem;
+
+    .servicos-container {
+      .servicos-textos {
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      .servicos-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+// Celular pequeno
+@media screen and (max-width: 480px) {
+  .servicos {
+    padding: 3rem 1rem;
+  }
 }

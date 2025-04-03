@@ -173,6 +173,14 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
   background-color: #8a1414;
 }
 
+@media screen and (max-width: 768px) {
+  header .header-menu {
+    display: none;
+  }
+  header {
+    padding: 0 3em;
+  }
+}
 .hero {
   width: 100vw;
   height: 100vh;
@@ -194,6 +202,11 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
   color: #bb9867;
 }
 
+@media screen and (max-width: 768px) {
+  .hero .hero-title {
+    font-size: 35px;
+  }
+}
 .sobre {
   display: flex;
   align-items: center;
@@ -225,6 +238,28 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .sobre {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .sobre-img img {
+    width: 30em;
+  }
+  .sobre .sobre-textos {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  .sobre .sobre-textos h1 {
+    font-size: 38px;
+  }
+  .sobre .sobre-textos p {
+    font-size: 18px;
+  }
+}
 .servicos-container {
   background-color: #1f1f1f;
   padding-bottom: 80px;
@@ -289,6 +324,33 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
   background-color: gray;
 }
 
+@media screen and (max-width: 1024px) {
+  .servicos {
+    padding: 4rem 2rem;
+  }
+  .servicos .servicos-container .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .servicos {
+    padding: 3rem 1.5rem;
+  }
+  .servicos .servicos-container .servicos-textos h1 {
+    font-size: 2rem;
+  }
+  .servicos .servicos-container .servicos-textos p {
+    font-size: 1rem;
+  }
+  .servicos .servicos-container .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 480px) {
+  .servicos {
+    padding: 3rem 1rem;
+  }
+}
 .localizacao {
   background-color: #1f1f1f;
 }
@@ -320,6 +382,33 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
   background-color: gray;
 }
 
+@media screen and (max-width: 1024px) {
+  .localizacao {
+    padding: 4rem 2rem;
+  }
+  .localizacao iframe {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .localizacao {
+    padding: 3rem 1.5rem;
+  }
+  .localizacao h1 {
+    font-size: 2rem;
+  }
+  .localizacao p {
+    font-size: 1rem;
+  }
+  .localizacao iframe {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .localizacao {
+    padding: 0;
+  }
+}
 .contato,
 .container {
   background-color: #000000;
@@ -407,6 +496,19 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
   background-color: rgb(71, 4, 4);
 }
 
+@media screen and (max-width: 768px) {
+  .contato .container {
+    padding: 0;
+    padding-right: 3em;
+    padding-left: 3em;
+  }
+  .contato .container-infos .info-item h2 {
+    font-size: 20px;
+  }
+  .contato .container-infos .info-item p {
+    font-size: 15px;
+  }
+}
 body,
 html {
   overflow-x: hidden;

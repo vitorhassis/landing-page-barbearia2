@@ -100,3 +100,27 @@
     }
   }
 }
+
+
+@media screen and (max-width: 768px) {
+
+.contato .container{
+  padding: 0;
+  padding-right: 3em;
+  padding-left: 3em;
+}
+
+.contato .container-infos .info-item {
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px
+  }
+    
+}
+
+
+
+}
