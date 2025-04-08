@@ -124,6 +124,29 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+
+  .galeria {
+    margin-top: -80px;
+
+    .galeria-textos {
+      h1 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 16px;
+      }
+
+      .galeria-bg-title {
+        top: 60%;
+        left: 54%;
+      }
+    }
+  }
+
+  
+}
+
 @media screen and (max-width: 480px) {
 
 .galeria {

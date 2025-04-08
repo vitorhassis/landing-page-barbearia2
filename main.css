@@ -122,6 +122,21 @@
   margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  .galeria {
+    margin-top: -80px;
+  }
+  .galeria .galeria-textos h1 {
+    font-size: 28px;
+  }
+  .galeria .galeria-textos p {
+    font-size: 16px;
+  }
+  .galeria .galeria-textos .galeria-bg-title {
+    top: 60%;
+    left: 54%;
+  }
+}
 @media screen and (max-width: 480px) {
   .galeria .galeria-textos h1 {
     font-size: 30px;
@@ -242,8 +257,31 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
 }
 
 @media screen and (max-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
   .hero .hero-title {
     font-size: 35px;
+  }
+  .hero .hero-button {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+  }
+  .hero .hero-button a {
+    font-family: "Sora", sans-serif;
+    color: #edeaef;
+    text-decoration: none;
+    padding: 15px 30px;
+    border: 1px solid #929085;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border 0.3s ease;
+  }
+  .hero .hero-button a:hover { /*forma do Sass usar o hover*/
+    border: 1px solid #8a1414;
+    background-color: #8a1414;
   }
 }
 @media screen and (max-width: 480px) {
@@ -288,21 +326,25 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
     display: flex;
     padding: 0;
     flex-direction: column;
+    gap: 7em;
     align-items: center;
     text-align: center;
   }
   .sobre-img img {
     width: 30em;
+    padding-top: 2em;
   }
   .sobre .sobre-textos {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding: 0;
+    margin: 0 auto;
   }
   .sobre .sobre-textos h1 {
-    font-size: 38px;
+    font-size: 28px;
   }
   .sobre .sobre-textos p {
-    font-size: 18px;
+    font-size: 16px;
+    max-width: 700px;
+    padding-bottom: 6em;
   }
 }
 @media screen and (max-width: 480px) {
@@ -374,26 +416,42 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
   background-color: gray;
 }
 
-@media screen and (max-width: 1024px) {
-  .servicos {
-    padding: 4rem 2rem;
-  }
-  .servicos .servicos-container .servicos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 @media screen and (max-width: 768px) {
-  .servicos {
-    padding: 3rem 1.5rem;
+  #linegap {
+    position: relative;
+    top: -5em;
   }
-  .servicos .servicos-container .servicos-textos h1 {
-    font-size: 2rem;
+  .serviços {
+    padding: 0;
   }
-  .servicos .servicos-container .servicos-textos p {
-    font-size: 1rem;
+  .serviços .servicos-container {
+    padding: 0;
   }
-  .servicos .servicos-container .servicos-grid {
-    grid-template-columns: 1fr;
+  .serviços .servicos-container .serviços-textos h1 {
+    font-size: 28px;
+  }
+  .serviços .servicos-container .serviços-textos p {
+    font-size: 16px;
+  }
+  .serviços .servicos-container .serviços-grid .imagem-wrapper img {
+    width: 200px;
+    height: 200px;
+  }
+  .serviços .servicos-container .serviços-grid .imagem-wrapper .info-hover {
+    height: 160px;
+    position: absolute;
+    bottom: 8.9em;
+    left: 0;
+    right: 0;
+  }
+  .serviços .servicos-container .serviços-grid .imagem-wrapper .info-hover .info-hover-text {
+    padding: 0;
+  }
+  .serviços .servicos-container .serviços-grid .imagem-wrapper .info-hover .info-hover-text h3 {
+    font-size: 15px;
+  }
+  .serviços .servicos-container .serviços-grid .imagem-wrapper .info-hover .info-hover-text p, .serviços .servicos-container .serviços-grid .imagem-wrapper .info-hover .info-hover-text span {
+    font-size: 11px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -435,12 +493,15 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
   background-color: gray;
 }
 
-@media screen and (max-width: 1024px) {
-  .localizacao {
-    padding: 4rem 2rem;
+@media screen and (max-width: 768px) {
+  .localizacao .localizacao-textos h1 {
+    font-size: 28px;
   }
-  .localizacao iframe {
-    height: 350px;
+  .localizacao .localizacao-textos p {
+    font-size: 16px;
+  }
+  .localizacao .localizacao-textos #localizacao-textos-p {
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -542,16 +603,22 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
 }
 
 @media screen and (max-width: 768px) {
+  .contato .contato-h1 h1 {
+    font-size: 28px;
+  }
   .contato .container {
     padding: 0;
     padding-right: 3em;
     padding-left: 3em;
   }
-  .contato .container-infos .info-item h2 {
-    font-size: 20px;
-  }
-  .contato .container-infos .info-item p {
+  .contato .container .info-item h2 {
     font-size: 15px;
+  }
+  .contato .container .info-item p {
+    font-size: 13px;
+  }
+  .contato .container .container-forms input, .contato .container .container-forms textarea {
+    max-width: 300px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -635,4 +702,10 @@ footer {
 }
 .footer-section a:hover {
   color: #bb9867;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-section p {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=main.css.map */

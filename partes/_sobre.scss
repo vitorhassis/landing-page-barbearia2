@@ -39,6 +39,7 @@
   display: flex;
   padding: 0;
   flex-direction: column;
+  gap: 7em;
   align-items: center;
   text-align: center;
   
@@ -47,20 +48,23 @@
 .sobre-img {
   img {
     width: 30em;
+    padding-top: 2em;
   }
 }
 
 .sobre .sobre-textos {
-  padding-left: 3em;
-  padding-right: 3em;
+    padding: 0;
+    margin: 0 auto;
 }
 
 .sobre .sobre-textos h1 {
-  font-size: 38px;
+  font-size: 28px;
 }
 
 .sobre .sobre-textos p {
-  font-size: 18px;
+  font-size: 16px;
+  max-width: 700px;
+  padding-bottom: 6em;
 }
 
 }

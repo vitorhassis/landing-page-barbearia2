@@ -81,7 +81,7 @@
 
         button {
           cursor: pointer;
-          font-family: 'Sora', sans-serif;
+          font-family: "Sora", sans-serif;
           font-weight: 800;
           width: 180px;
           height: 40px;
@@ -101,30 +101,41 @@
   }
 }
 
-
 @media screen and (max-width: 768px) {
+  .contato {
 
-.contato .container{
-  padding: 0;
-  padding-right: 3em;
-  padding-left: 3em;
-}
+    .contato-h1 {
+      h1 {
+        font-size: 28px;
+      }
+      
+    }
 
-.contato .container-infos .info-item {
-  h2 {
-    font-size: 20px;
+    .container {
+      padding: 0;
+      padding-right: 3em;
+      padding-left: 3em;
+
+      .info-item {
+        h2 {
+          font-size: 15px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+      }
+
+      .container-forms {
+        input,textarea {
+          max-width: 300px;
+        }
+      }
+    }
   }
-
-  p {
-    font-size: 15px
-  }
-    
-}
-
 }
 
 @media screen and (max-width: 480px) {
-
   .container {
     display: flex;
     flex-direction: column;
@@ -145,8 +156,6 @@
           font-size: 13px;
         }
       }
-
     }
   }
-
 }

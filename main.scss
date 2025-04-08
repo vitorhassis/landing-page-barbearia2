@@ -9,25 +9,6 @@
 @import "partes/localizacao";
 @import "partes/contato";
 @import "partes/base";
+@import "partes/footer"
 
-footer {
-  background-color: $background-gray;
-  padding: 2em;
-}
 
-.footer-section {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  color: $gray-footer;
-
-  a {
-    text-decoration: none;
-    color: $gray-footer;
-  }
-
-  a:hover {
-    color: $highlight;
-  }
-}

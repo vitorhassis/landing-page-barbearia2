@@ -33,17 +33,27 @@
   background-color: gray;
 }
 
-@media screen and (max-width: 1024px) {
-  .localizacao {
-    padding: 4rem 2rem;
+@media screen and (max-width: 768px) {
 
-    iframe {
-      height: 350px;
+  .localizacao {
+    .localizacao-textos {
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      #localizacao-textos-p {
+       font-size: 16px;
+     }
     }
   }
+
+
 }
 
-// Mobile
 @media screen and (max-width: 480px) {
 
   .localizacao {
