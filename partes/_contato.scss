@@ -121,6 +121,32 @@
     
 }
 
+}
 
+@media screen and (max-width: 480px) {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    .container-infos {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 3em;
+
+      .info-item {
+        display: flex;
+
+        h2 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+      }
+
+    }
+  }
 
 }

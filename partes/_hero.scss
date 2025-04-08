@@ -28,3 +28,14 @@
 }
 
 }
+
+@media screen and (max-width: 480px) {
+
+  .hero {
+    .hero-title {
+      font-size: 28px;
+      padding: 20px;
+    }
+  }
+
+}

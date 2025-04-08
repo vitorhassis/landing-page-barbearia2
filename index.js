@@ -1,6 +1,12 @@
 const wrapper = document.querySelector(".carrossel-wrapper");
 const buttonLeft = document.getElementById("buttonLeft");
 const buttonRight = document.getElementById("buttonRight");
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle('active');
+})
 
 let index = 0;
 const itemsPerView = 2; 

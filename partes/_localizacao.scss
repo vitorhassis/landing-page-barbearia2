@@ -44,28 +44,18 @@
 }
 
 // Mobile
-@media screen and (max-width: 768px) {
-  .localizacao {
-    padding: 3rem 1.5rem;
+@media screen and (max-width: 480px) {
 
-    h1 {
-      font-size: 2rem;
-    }
-
-    p {
-      font-size: 1rem;
-    }
-
-    iframe {
-      height: 300px;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  
   .localizacao {
     padding: 0;
+    .localizacao-textos {
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
   }
 
 }

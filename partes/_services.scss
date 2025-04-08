@@ -113,9 +113,18 @@
   }
 }
 
-// Celular pequeno
 @media screen and (max-width: 480px) {
-  .servicos {
-    padding: 3rem 1rem;
+  .serviços {
+    .servicos-container {
+      .serviços-textos {
+        h1 {
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 15px;
+        }
+      }
+    }
   }
 }
