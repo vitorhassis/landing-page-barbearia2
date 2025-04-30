@@ -37,10 +37,6 @@
         />
       </div>
 
-      <button class="menu-toggle" id="menu-toggle">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
       <div class="header-menu" id="menu">
         <ul>
           <li data-aos="fade-down" data-aos-delay="100"><a href="#home">Home</a></li>
@@ -105,21 +101,32 @@
             <article data-aos="fade-up"
            data-aos-delay="150">
            <div class="imagem-wrapper">
-            <img src="assets/imagens/cortecabeloServicos.png" alt="imagem corte de cabelo" />
-            <div class="info-hover">
+
+            <div class="servico-item-mobile">
+              <span class="icone-preco">$</span>
+              <img src="assets/imagens/cortecabeloServicos.png" alt="imagem corte de cabelo" />
+            </div>
+            
+            <div class="info-hover" id="hover-barba">
               <div class="info-hover-text">
                 <h3>Corte de cabelo</h3>
                 <p>Estilos modernos e elegantes</p>
-              <span>R$30,00</span>
-              </div>
-            </div>
+                <span>R$30,00</span>
+               </div>
+             </div>
            </div>
             </article>
 
             <article data-aos="fade-up"
             data-aos-delay="250">
+    
             <div class="imagem-wrapper">
-              <img src="assets/imagens/barbaServicos.png" alt="imagem barba" />
+
+              <div class="servico-item-mobile">
+                <span class="icone-preco">$</span>
+                <img src="assets/imagens/barbaServicos.png" alt="imagem barba" />
+              </div>
+
               <div class="info-hover">
                 <div class="info-hover-text">
                   <h3>Barba</h3>
@@ -133,14 +140,18 @@
             <article data-aos="fade-up"
             data-aos-delay="350">
             <div class="imagem-wrapper">
-              <img src="assets/imagens/cabeloebarbaServicos.png" alt="imagem corte cabelo" />
+
+              <div class="servico-item-mobile">
+                <span class="icone-preco">$</span>
+                <img src="assets/imagens/cabeloebarbaServicos.png" alt="imagem corte cabelo" />
+              </div>
+              
               <div class="info-hover">
                 <div class="info-hover-text">
                   <h3>Cabelo e Barba</h3>
                 <p>Visual completo com corte e barba no estilo</p>
               <span>R$70,00</span>
                 </div>
-                
               </div>
             </div>
               
@@ -334,6 +345,15 @@ data-aos-delay="400">
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
+</script>
+<script>
+  document.querySelectorAll('.icone-preco').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-target');
+      const target = document.getElementById(id);
+      target.classList.toggle('ativo');
+    });
+  });
 </script>
 </body>
 </html>

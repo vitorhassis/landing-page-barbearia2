@@ -28,8 +28,8 @@
   .imagem-wrapper {
     position: relative;
     height: 342px;
-  }
 
+  }
 
   .info-hover {
     height: 302px;
@@ -77,57 +77,127 @@
 }
 
 
-@media screen and (max-width: 768px) {
+// Layout normal para desktop
+.servicos-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 2em;
 
-  #linegap {
-    position: relative;
-    top: -5em; 
+  .servico-item {
+    background: $black-dark;
+    border: 1px solid $gray-border;
+    padding: 20px;
+    transition: all 0.3s ease;
+
+    &:hover .texto-hover {
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .texto-hover {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      text-align: center;
+      margin-top: 10px;
+      color: $highlight;
+      font-size: 18px;
+    }
   }
+}
+
+.servico-item-mobile {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
   .serviços {
-    padding: 0;
-
     .servicos-container {
-      padding: 0;
-
       .serviços-textos {
         h1 {
-          font-size: 28px;
+          font-size: 40px;
         }
+
         p {
-          font-size: 16px;
+          font-size: 23px;
         }
       }
 
       .serviços-grid {
-        .imagem-wrapper {
-          img {
-            width: 200px;
-            height: 200px;
-          }
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+        align-items: center;
 
-          .info-hover {
-            height: 160px;
-            position: absolute;
-            bottom: 8.9em;
-            left: 0;
-            right: 0;
+      }
 
-            .info-hover-text {
-              padding: 0;
-              h3 {
-                font-size: 15px;
-              }
-              p,span {
-                font-size: 11px;
-              }
-            }
+      .imagem-wrapper {
+        .servico-item-mobile {
+          display: flex;
+          align-items: center; /* alinha verticalmente o ícone e a imagem */
+          gap: 10px;
+
+          .icone-preco {
+            background-color: transparent;
+            color: $white;
+            border: 1px solid $white;
+            border-radius: 50%;
+           width: 32px;
+           height: 32px;
+           display: flex;
+            align-items: center;
+             justify-content: center;
+            cursor: pointer;
           }
-          
         }
+      }
+
+      .info-hover {
+        height: 302px;
+        position: absolute;
+        bottom: 0;
+        left: 2.78em;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
+        color: white;
+        display: flex;
+    
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+      
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    
+        .info-hover-text {
+          padding-bottom: 30px;
+        }
+    
+        p {
+          font-size: 14px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+    
+        span {
+          color: $highlight;
+        }
+      }
+      
+
+      
       }
     }
   }
-}
+  
+
 
 @media screen and (max-width: 480px) {
   .serviços {

@@ -125,42 +125,25 @@
 }
 
 @media screen and (max-width: 768px) {
+  .galeria-carrossel, .carrossel-container, .carrossel-wrapper, .carrossel-itens {
+    display: none;
 
-  .galeria {
-    margin-top: -80px;
-
-    .galeria-textos {
-      h1 {
-        font-size: 28px;
-      }
-      p {
-        font-size: 16px;
-      }
-
-      .galeria-bg-title {
-        top: 60%;
-        left: 54%;
-      }
+    #buttonLeft, #buttonRight {
+      display: none;
     }
   }
-
   
 }
 
 @media screen and (max-width: 480px) {
-
-.galeria {
-  .galeria-textos {
-    h1 {
-      font-size: 30px;
-    }
-
-    p {
-      font-size: 15px;
+  .galeria {
+    .galeria-textos {
+      h1 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 23px;
+      }
     }
   }
-}
-
-
-
 }

@@ -52,61 +52,48 @@ header {
       transition: background-color 0.3s ease, border 0.3s ease;
 
       &:hover { /*forma do Sass usar o hover*/
-        border: 1px solid $red-button;
-        background-color: $red-button;
+        border: 1px solid $white;
+        background-color: $highlight;
       }
     }
   }
+}
+
+.header-icon {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
+  
 
   header {
-    padding: 0;
+    display: flex;
 
-    .header-menu {
+    #menu {
       display: none;
-
-      ul {
-        flex-direction: column;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        background-color: rgb(90, 90, 89);
-
-        li a {
-          font-size: 15px;
-          display: block;
-          color: white;
-          text-decoration: none;
-        }
-
-      }
-
     }
+
     .header-button {
       display: none;
     }
+
+    #header-img {
+      margin-top: 3em;
+
+    }
+
+    .header-icon {
+      display: flex;
+      gap: 30px;
+      margin-top: 3em;
+
+      i {
+        font-size: 50px;
+      }
+
+    }
+
   }
-
-  .menu-toggle {
-    color: white;
-    display: block;
-    margin-right: 20px;
-    padding: 20px;
-    background: none;
-    border: none;
-    font-size: 20px;
-  
-  }
-
-  .header-menu.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1em;
-  }
-
-  
-
 }
+
+

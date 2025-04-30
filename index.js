@@ -4,15 +4,35 @@ const buttonRight = document.getElementById("buttonRight");
 const toggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
-toggle.addEventListener("click", () => {
-  menu.classList.toggle('active');
-})
+// Menu toggle (evita erro caso o botão não exista)
+if (toggle) {
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+}
 
 let index = 0;
-const itemsPerView = 2; 
-const totalItems = document.querySelectorAll(".carrossel-itens").length;
+const items = document.querySelectorAll(".carrossel-itens");
+const totalItems = items.length;
+
+// Responsividade: define items por vez e gap com base no viewport
+function getResponsiveConfig() {
+  const isMobile = window.innerWidth <= 768;
+  return {
+    itemsPerView: isMobile ? 1 : 2,
+    gap: isMobile ? 20 : 100,
+  };
+}
+
+function updateTransform() {
+  const { gap } = getResponsiveConfig();
+  const itemWidth = items[0].offsetWidth;
+  const translateX = -(itemWidth + gap) * index;
+  wrapper.style.transform = `translateX(${translateX}px)`;
+}
 
 buttonRight.addEventListener("click", () => {
+  const { itemsPerView } = getResponsiveConfig();
   const maxIndex = Math.ceil(totalItems / itemsPerView) - 1;
   if (index < maxIndex) index++;
   updateTransform();
@@ -23,9 +43,12 @@ buttonLeft.addEventListener("click", () => {
   updateTransform();
 });
 
-function updateTransform() {
-  const itemWidth = document.querySelector(".carrossel-itens").offsetWidth;
-  const gap = 100; 
-  const translateX = -(itemWidth + gap) * index;
-  wrapper.style.transform = `translateX(${translateX}px)`;
-}
+// Redimensionamento da tela atualiza o carrossel
+window.addEventListener("resize", () => {
+  updateTransform();
+});
+
+// Garante alinhamento correto ao carregar
+window.addEventListener("load", () => {
+  updateTransform();
+});

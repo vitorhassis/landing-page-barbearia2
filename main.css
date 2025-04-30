@@ -123,26 +123,19 @@
 }
 
 @media screen and (max-width: 768px) {
-  .galeria {
-    margin-top: -80px;
+  .galeria-carrossel, .carrossel-container, .carrossel-wrapper, .carrossel-itens {
+    display: none;
   }
-  .galeria .galeria-textos h1 {
-    font-size: 28px;
-  }
-  .galeria .galeria-textos p {
-    font-size: 16px;
-  }
-  .galeria .galeria-textos .galeria-bg-title {
-    top: 60%;
-    left: 54%;
+  .galeria-carrossel #buttonLeft, .galeria-carrossel #buttonRight, .carrossel-container #buttonLeft, .carrossel-container #buttonRight, .carrossel-wrapper #buttonLeft, .carrossel-wrapper #buttonRight, .carrossel-itens #buttonLeft, .carrossel-itens #buttonRight {
+    display: none;
   }
 }
 @media screen and (max-width: 480px) {
   .galeria .galeria-textos h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .galeria .galeria-textos p {
-    font-size: 15px;
+    font-size: 23px;
   }
 }
 header {
@@ -192,47 +185,34 @@ header .header-button a {
   transition: background-color 0.3s ease, border 0.3s ease;
 }
 header .header-button a:hover { /*forma do Sass usar o hover*/
-  border: 1px solid #8a1414;
-  background-color: #8a1414;
+  border: 1px solid #ffffff;
+  background-color: #bb9867;
+}
+
+.header-icon {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
   header {
-    padding: 0;
+    display: flex;
   }
-  header .header-menu {
+  header #menu {
     display: none;
-  }
-  header .header-menu ul {
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: rgb(90, 90, 89);
-  }
-  header .header-menu ul li a {
-    font-size: 15px;
-    display: block;
-    color: white;
-    text-decoration: none;
   }
   header .header-button {
     display: none;
   }
-  .menu-toggle {
-    color: white;
-    display: block;
-    margin-right: 20px;
-    padding: 20px;
-    background: none;
-    border: none;
-    font-size: 20px;
+  header #header-img {
+    margin-top: 3em;
   }
-  .header-menu.active {
+  header .header-icon {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1em;
+    gap: 30px;
+    margin-top: 3em;
+  }
+  header .header-icon i {
+    font-size: 50px;
   }
 }
 .hero {
@@ -244,7 +224,7 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
   align-items: center;
 }
 .hero .hero-title {
-  margin-bottom: 7rem;
+  margin-bottom: 3rem;
   font-size: 2.7rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -258,36 +238,40 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
 
 @media screen and (max-width: 768px) {
   .hero {
+    background: url("/assets/imagens/fb8ca9bb2eb3f24f91863af43bfd8557 (1) 1.png") no-repeat center center/cover;
+    margin-top: -1px;
+    text-align: center;
+    justify-content: center;
     display: flex;
     flex-direction: column;
   }
   .hero .hero-title {
-    font-size: 35px;
+    font-size: 40px;
+    max-width: 600px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    margin-top: 4em;
   }
   .hero .hero-button {
-    position: relative;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
+    margin-top: 4em;
   }
   .hero .hero-button a {
+    font-size: 20px;
     font-family: "Sora", sans-serif;
     color: #edeaef;
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 30px 80px;
     border: 1px solid #929085;
     border-radius: 5px;
     transition: background-color 0.3s ease, border 0.3s ease;
+    margin-top: 4em;
   }
   .hero .hero-button a:hover { /*forma do Sass usar o hover*/
-    border: 1px solid #8a1414;
-    background-color: #8a1414;
-  }
-}
-@media screen and (max-width: 480px) {
-  .hero .hero-title {
-    font-size: 28px;
-    padding: 20px;
+    border: 1px solid #ffffff;
+    background-color: #bb9867;
   }
 }
 .sobre {
@@ -311,13 +295,13 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
   padding-bottom: 5em;
 }
 .sobre .sobre-textos h1 {
-  font-size: 45px;
+  font-size: 47px;
   text-align: center;
   margin-bottom: 20px;
 }
 .sobre .sobre-textos p {
-  font-size: 18px;
-  line-height: 150%;
+  font-size: 20px;
+  line-height: 175%;
   text-align: center;
 }
 
@@ -336,20 +320,26 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
   }
   .sobre .sobre-textos {
     padding: 0;
-    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
   }
   .sobre .sobre-textos h1 {
-    font-size: 28px;
+    font-size: 40px;
   }
   .sobre .sobre-textos p {
-    font-size: 16px;
+    padding-top: 1em;
+    font-size: 23px;
     max-width: 700px;
-    padding-bottom: 6em;
+    margin: 0 auto;
+    padding-bottom: 7em;
   }
 }
 @media screen and (max-width: 480px) {
   .sobre .sobre-img img {
     width: 400px;
+  }
+  .sobre .sobre-textos {
+    max-width: 380px;
   }
 }
 .servicos-container {
@@ -416,42 +406,96 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
   background-color: gray;
 }
 
+.servicos-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 2em;
+}
+.servicos-wrapper .servico-item {
+  background: #000000;
+  border: 1px solid #CDCDCD;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.servicos-wrapper .servico-item:hover .texto-hover {
+  opacity: 1;
+}
+.servicos-wrapper .servico-item img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.servicos-wrapper .servico-item .texto-hover {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  margin-top: 10px;
+  color: #bb9867;
+  font-size: 18px;
+}
+
+.servico-item-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
-  #linegap {
-    position: relative;
-    top: -5em;
-  }
-  .serviços {
-    padding: 0;
-  }
-  .serviços .servicos-container {
-    padding: 0;
-  }
   .serviços .servicos-container .serviços-textos h1 {
-    font-size: 28px;
+    font-size: 40px;
   }
   .serviços .servicos-container .serviços-textos p {
-    font-size: 16px;
+    font-size: 23px;
   }
-  .serviços .servicos-container .serviços-grid .imagem-wrapper img {
-    width: 200px;
-    height: 200px;
+  .serviços .servicos-container .serviços-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    align-items: center;
   }
-  .serviços .servicos-container .serviços-grid .imagem-wrapper .info-hover {
-    height: 160px;
+  .serviços .servicos-container .imagem-wrapper .servico-item-mobile {
+    display: flex;
+    align-items: center; /* alinha verticalmente o ícone e a imagem */
+    gap: 10px;
+  }
+  .serviços .servicos-container .imagem-wrapper .servico-item-mobile .icone-preco {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .serviços .servicos-container .info-hover {
+    height: 302px;
     position: absolute;
-    bottom: 8.9em;
-    left: 0;
+    bottom: 0;
+    left: 2.78em;
     right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
-  .serviços .servicos-container .serviços-grid .imagem-wrapper .info-hover .info-hover-text {
-    padding: 0;
+  .serviços .servicos-container .info-hover .info-hover-text {
+    padding-bottom: 30px;
   }
-  .serviços .servicos-container .serviços-grid .imagem-wrapper .info-hover .info-hover-text h3 {
-    font-size: 15px;
+  .serviços .servicos-container .info-hover p {
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  .serviços .servicos-container .serviços-grid .imagem-wrapper .info-hover .info-hover-text p, .serviços .servicos-container .serviços-grid .imagem-wrapper .info-hover .info-hover-text span {
-    font-size: 11px;
+  .serviços .servicos-container .info-hover span {
+    color: #bb9867;
   }
 }
 @media screen and (max-width: 480px) {
@@ -495,13 +539,13 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
 
 @media screen and (max-width: 768px) {
   .localizacao .localizacao-textos h1 {
-    font-size: 28px;
+    font-size: 40px;
   }
   .localizacao .localizacao-textos p {
-    font-size: 16px;
+    font-size: 23px;
   }
   .localizacao .localizacao-textos #localizacao-textos-p {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -584,6 +628,8 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
 }
 .contato .container .container-forms form textarea {
   padding-bottom: 80px;
+  max-width: 375px;
+  max-height: 8px;
 }
 .contato .container .container-forms form button {
   cursor: pointer;
@@ -604,7 +650,7 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
 
 @media screen and (max-width: 768px) {
   .contato .contato-h1 h1 {
-    font-size: 28px;
+    font-size: 40px;
   }
   .contato .container {
     padding: 0;
@@ -612,16 +658,17 @@ header .header-button a:hover { /*forma do Sass usar o hover*/
     padding-left: 3em;
   }
   .contato .container .info-item h2 {
-    font-size: 15px;
+    font-size: 23px;
   }
   .contato .container .info-item p {
-    font-size: 13px;
-  }
-  .contato .container .container-forms input, .contato .container .container-forms textarea {
-    max-width: 300px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 480px) {
+  .contato .contato-h1 {
+    padding: 0;
+    padding-bottom: 3em;
+  }
   .container {
     display: flex;
     flex-direction: column;

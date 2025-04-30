@@ -77,6 +77,8 @@
 
         textarea {
           padding-bottom: 80px;
+          max-width: 375px;
+          max-height: 8px;
         }
 
         button {
@@ -106,7 +108,7 @@
 
     .contato-h1 {
       h1 {
-        font-size: 28px;
+        font-size: 40px;
       }
       
     }
@@ -118,24 +120,29 @@
 
       .info-item {
         h2 {
-          font-size: 15px;
+          font-size: 23px;
         }
 
         p {
-          font-size: 13px;
+          font-size: 16px;
         }
       }
 
-      .container-forms {
-        input,textarea {
-          max-width: 300px;
-        }
+
+
       }
     }
   }
-}
 
 @media screen and (max-width: 480px) {
+
+  .contato {
+    .contato-h1 {
+      padding: 0;
+      padding-bottom: 3em;
+    }
+  }
+
   .container {
     display: flex;
     flex-direction: column;
