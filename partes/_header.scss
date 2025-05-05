@@ -23,14 +23,14 @@ header {
 
       li {
         a {
-        font-weight: bold;
-        font-family: "Sora", sans-serif;
-        color: $white-dark;
-        text-decoration: none;
+          font-weight: bold;
+          font-family: "Sora", sans-serif;
+          color: $white-dark;
+          text-decoration: none;
 
-        &:hover {
-          color: rgb(175, 175, 175);
-        }
+          &:hover {
+            color: rgb(175, 175, 175);
+          }
         }
       }
     }
@@ -51,7 +51,8 @@ header {
       border-radius: 5px;
       transition: background-color 0.3s ease, border 0.3s ease;
 
-      &:hover { /*forma do Sass usar o hover*/
+      &:hover {
+        /*forma do Sass usar o hover*/
         border: 1px solid $white;
         background-color: $highlight;
       }
@@ -59,41 +60,94 @@ header {
   }
 }
 
-.header-icon {
+.header-icon-cell {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
-  
-
   header {
     display: flex;
-
-    #menu {
-      display: none;
-    }
+    padding: 0 50px 0px 50px;
 
     .header-button {
       display: none;
     }
 
     #header-img {
-      margin-top: 3em;
-
+      margin-left: -3em;
     }
 
-    .header-icon {
+    .header-icon-cell {
       display: flex;
-      gap: 30px;
-      margin-top: 3em;
+      gap: 18px;
 
       i {
-        font-size: 50px;
+        font-size: 28px;
       }
+    }
+  }
+}
 
+@media screen and (max-width: 720px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+
+    #header-img {
+      margin-left: -2em;
+      margin-top: 3.5em;
+    }
+
+    .header-icon-cell {
+      display: flex;
+      gap: 18px;
+      margin-top: 3.5em;
+
+      i {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+
+    img {
+      margin-left: -3em;
+    }
+
+    .header-icon-cell {
+      display: flex;
+      gap: 18px;
+      margin-top: 3.5em;
+
+      i {
+        font-size: 28px;
+      }
     }
 
   }
 }
 
+@media screen and (max-width: 375px) {
+  header {
+    display: flex;
+    justify-content: space-between;
 
+    .header-icon-cell {
+      display: flex;
+      gap: 18px;
+      margin-top: 3.5em;
+
+      i {
+        font-size: 28px;
+      }
+    }
+
+  }
+}

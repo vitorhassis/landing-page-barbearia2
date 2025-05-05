@@ -30,6 +30,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 20em;
+    gap: 350px;
 
     .container-infos {
       display: flex;
@@ -105,64 +106,71 @@
 
 @media screen and (max-width: 768px) {
   .contato {
+    padding-bottom: 3em;
 
     .contato-h1 {
+      padding-bottom: 50px;
+
       h1 {
-        font-size: 40px;
+        font-size: 30px;
+        padding-top: 30px;
       }
-      
+
+      .linha {
+        width: 60px;
+      }
     }
 
     .container {
-      padding: 0;
-      padding-right: 3em;
-      padding-left: 3em;
+      flex-direction: column;
+      padding: 0 2em;
+      gap: 40px;
 
-      .info-item {
+      .container-infos {
+        align-items: center;
+        text-align: center;
+
+        .info-item {
+          justify-content: center;
+        }
+
         h2 {
-          font-size: 23px;
+          font-size: 18px;
+          padding: 0;
         }
 
         p {
           font-size: 16px;
+          max-width: 300px;
         }
       }
 
+      .container-forms {
+        width: 100%;
 
+        form {
+          width: 100%;
 
-      }
-    }
-  }
+          input,
+          textarea {
+            width: 100%;
+            max-width: 100%;
+          }
 
-@media screen and (max-width: 480px) {
+          textarea {
+            height: 120px;
+            max-height: none;
+            padding-bottom: 10px;
+          }
 
-  .contato {
-    .contato-h1 {
-      padding: 0;
-      padding-bottom: 3em;
-    }
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-
-    .container-infos {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 3em;
-
-      .info-item {
-        display: flex;
-
-        h2 {
-          font-size: 20px;
-        }
-
-        p {
-          font-size: 13px;
+          button {
+            width: 100%;
+            max-width: 200px;
+          }
         }
       }
     }
   }
 }
+
+
