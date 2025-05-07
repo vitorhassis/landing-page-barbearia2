@@ -25,15 +25,20 @@ function getResponsiveConfig() {
 }
 
 function updateTransform() {
-  const { gap } = getResponsiveConfig();
-  const itemWidth = items[0].offsetWidth;
+  const { gap, itemsPerView } = getResponsiveConfig();
+  const itemWidth = wrapper.clientWidth / itemsPerView;
   const translateX = -(itemWidth + gap) * index;
   wrapper.style.transform = `translateX(${translateX}px)`;
 }
 
 buttonRight.addEventListener("click", () => {
-  const { itemsPerView } = getResponsiveConfig();
-  const maxIndex = Math.ceil(totalItems / itemsPerView) - 1;
+  const { itemsPerView, gap } = getResponsiveConfig(); // ADICIONA o gap aqui!
+  const visibleArea = wrapper.clientWidth;
+  const itemWidth = items[0].getBoundingClientRect().width;
+
+  // Cálculo seguro do índice máximo
+  const maxIndex = totalItems - itemsPerView;
+
   if (index < maxIndex) index++;
   updateTransform();
 });
@@ -44,11 +49,7 @@ buttonLeft.addEventListener("click", () => {
 });
 
 // Redimensionamento da tela atualiza o carrossel
-window.addEventListener("resize", () => {
-  updateTransform();
-});
+window.addEventListener("resize", updateTransform);
 
 // Garante alinhamento correto ao carregar
-window.addEventListener("load", () => {
-  updateTransform();
-});
+window.addEventListener("load", updateTransform);

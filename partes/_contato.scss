@@ -29,8 +29,8 @@
   .container {
     display: flex;
     justify-content: space-between;
-    padding: 0 20em;
-    gap: 350px;
+    //padding: 0 20em;
+    //gap: 350px;
 
     .container-infos {
       display: flex;
@@ -104,7 +104,150 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+  .contato {
+    padding-bottom: 3em;
+
+    .contato-h1 {
+      padding-bottom: 50px;
+
+      h1 {
+        font-size: 30px;
+        padding-top: 30px;
+      }
+
+      .linha {
+        width: 60px;
+      }
+    }
+
+    .container {
+      margin-left: 5em;
+      margin-right: 5em;
+      gap: 100px;
+
+      .container-infos {
+        align-items: flex-start;  // <- ALINHA ÍCONES E TEXTOS À ESQUERDA
+        text-align: left;         // <- ESSENCIAL PARA h2 e p
+
+        .info-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+
+          div {
+            h2 {
+              font-size: 18px;
+            }
+
+            p {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+      .container-forms {
+        max-width: 90vw;
+
+        form {
+          width: 350px;
+          input,
+          textarea {
+            width: 100%;
+            max-width: 100%;
+          }
+
+          textarea {
+            height: 120px;
+            max-height: none;
+            padding-bottom: 10px;
+          }
+
+          button {
+            width: 100%;
+            max-width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contato {
+    padding-bottom: 3em;
+
+    .contato-h1 {
+      padding-bottom: 50px;
+
+      h1 {
+        font-size: 30px;
+        padding-top: 30px;
+      }
+
+      .linha {
+        width: 60px;
+      }
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 850px; 
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2em;
+
+      .container-infos {
+        align-items: flex-start;
+        text-align: left;
+
+        .info-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+
+          div {
+            h2 {
+              font-size: 18px;
+            }
+
+            p {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+      .container-forms {
+        form {
+          width: 400px;
+
+          input,
+          textarea {
+            width: 100%;
+            max-width: 100%;
+          }
+
+          textarea {
+            height: 120px;
+            max-height: none;
+            padding-bottom: 10px;
+          }
+
+          button {
+            width: 100%;
+            max-width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1023px) {
   .contato {
     padding-bottom: 3em;
 
@@ -123,25 +266,27 @@
 
     .container {
       flex-direction: column;
-      padding: 0 2em;
-      gap: 40px;
+      margin: 0 1.5em;
+      gap: 30px;
 
       .container-infos {
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
 
         .info-item {
-          justify-content: center;
-        }
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
 
-        h2 {
-          font-size: 18px;
-          padding: 0;
-        }
+          div {
+            h2 {
+              font-size: 18px;
+            }
 
-        p {
-          font-size: 16px;
-          max-width: 300px;
+            p {
+              font-size: 13px;
+            }
+          }
         }
       }
 
@@ -172,5 +317,8 @@
     }
   }
 }
+
+
+
 
 

@@ -21,6 +21,10 @@
   }
 }
 
+.hero-p, .hero-button {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .hero {
     margin-top: -1px;
@@ -136,8 +140,8 @@
 
 
   @media screen and (max-width: 480px) {
-
     .hero {
+      
       .hero-title {
         font-size: 25px;
         margin-top: 5em;
@@ -151,6 +155,8 @@
     }
   
   } 
+
+  
 
 
 

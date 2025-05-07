@@ -46,7 +46,7 @@
   gap: 30px;
 }
 .galeria .galeria-carrossel button {
-  margin: 0 223px;
+  margin: 0 10px;
   font-size: 2.5em;
   color: #bb9867;
   height: 50px;
@@ -68,7 +68,7 @@
 }
 .galeria .galeria-carrossel .carrossel-container .carrossel-wrapper {
   display: flex;
-  gap: 100px;
+  gap: 30px;
   transition: transform 0.5s ease;
   will-change: transform;
 }
@@ -123,24 +123,80 @@
 }
 
 @media screen and (max-width: 768px) {
-  .galeria .galeria-textos h1 {
-    font-size: 28px;
+  .galeria-carrossel {
+    flex-direction: row;
+    gap: 10px;
   }
-  .galeria .galeria-textos p {
-    font-size: 16px;
+  .galeria-carrossel button {
+    font-size: 2em;
+    top: 45%;
+    transform: translateY(-50%);
   }
-  .carrossel-itens,
-  #buttonLeft,
-  #buttonRight {
-    display: none;
+  .galeria-carrossel #buttonLeft {
+    left: -10px;
+  }
+  .galeria-carrossel #buttonRight {
+    right: -10px;
+  }
+  .galeria-carrossel .carrossel-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .galeria-carrossel .carrossel-wrapper {
+    gap: 20px;
+  }
+  .galeria-carrossel .carrossel-itens {
+    min-width: 100% !important;
+  }
+  .carrossel-itens-textos {
+    padding: 30px 20px;
+  }
+  .carrossel-itens-textos h3 {
+    font-size: 20px;
+  }
+  .carrossel-itens-textos p {
+    font-size: 14px;
   }
 }
-@media screen and (max-width: 480px) {
-  .galeria .galeria-textos h1 {
-    font-size: 28px;
+@media screen and (max-width: 375px) {
+  .galeria-carrossel {
+    flex-direction: row;
+    gap: 10px;
   }
-  .galeria .galeria-textos p {
-    font-size: 16px;
+  .galeria-carrossel button {
+    font-size: 2em;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+  .galeria-carrossel #buttonLeft {
+    left: -10px;
+  }
+  .galeria-carrossel #buttonRight {
+    right: -10px;
+  }
+  .galeria-carrossel .carrossel-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .galeria-carrossel .carrossel-wrapper {
+    gap: 0px;
+  }
+  .galeria-carrossel .carrossel-itens {
+    width: 10px;
+    height: 300px;
+  }
+  .galeria-carrossel .carrossel-itens img {
+    width: 100px;
+    height: 100px;
+  }
+  .carrossel-itens-textos {
+    padding: 30px 20px;
+  }
+  .carrossel-itens-textos h3 {
+    font-size: 20px;
+  }
+  .carrossel-itens-textos p {
+    font-size: 14px;
   }
 }
 header {
@@ -290,6 +346,10 @@ header .header-button a:hover {
   color: #bb9867;
 }
 
+.hero-p, .hero-button {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .hero {
     margin-top: -1px;
@@ -405,6 +465,7 @@ header .header-button a:hover {
   color: white;
   padding-left: 12em;
   padding-bottom: 13em;
+  margin-top: -1px;
 }
 .sobre .sobre-img {
   position: relative;
@@ -473,7 +534,7 @@ header .header-button a:hover {
     padding: 1em;
     text-align: center;
     justify-content: center;
-    max-width: 550px;
+    max-width: 650px;
   }
   .sobre .sobre-textos h1 {
     font-size: 28px;
@@ -499,6 +560,13 @@ header .header-button a:hover {
   }
   .sobre .sobre-textos p {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sobre .sobre-img img {
+    margin-top: 10em;
+    padding: 0;
+    width: 320px;
   }
 }
 .servicos-container {
@@ -865,7 +933,7 @@ header .header-button a:hover {
     position: absolute;
     bottom: 0;
     left: 3em;
-    width: 210px;
+    width: 212px;
     height: 181px;
     right: 0;
     background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
@@ -980,8 +1048,6 @@ header .header-button a:hover {
 .contato .container {
   display: flex;
   justify-content: space-between;
-  padding: 0 20em;
-  gap: 350px;
 }
 .contato .container .container-infos {
   display: flex;
@@ -1042,7 +1108,117 @@ header .header-button a:hover {
   background-color: rgb(71, 4, 4);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+  .contato {
+    padding-bottom: 3em;
+  }
+  .contato .contato-h1 {
+    padding-bottom: 50px;
+  }
+  .contato .contato-h1 h1 {
+    font-size: 30px;
+    padding-top: 30px;
+  }
+  .contato .contato-h1 .linha {
+    width: 60px;
+  }
+  .contato .container {
+    margin-left: 5em;
+    margin-right: 5em;
+    gap: 100px;
+  }
+  .contato .container .container-infos {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .contato .container .container-infos .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .contato .container .container-infos .info-item div h2 {
+    font-size: 18px;
+  }
+  .contato .container .container-infos .info-item div p {
+    font-size: 13px;
+  }
+  .contato .container .container-forms {
+    max-width: 90vw;
+  }
+  .contato .container .container-forms form {
+    width: 350px;
+  }
+  .contato .container .container-forms form input,
+  .contato .container .container-forms form textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+  .contato .container .container-forms form textarea {
+    height: 120px;
+    max-height: none;
+    padding-bottom: 10px;
+  }
+  .contato .container .container-forms form button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contato {
+    padding-bottom: 3em;
+  }
+  .contato .contato-h1 {
+    padding-bottom: 50px;
+  }
+  .contato .contato-h1 h1 {
+    font-size: 30px;
+    padding-top: 30px;
+  }
+  .contato .contato-h1 .linha {
+    width: 60px;
+  }
+  .contato .container {
+    display: flex;
+    justify-content: center;
+    gap: 850px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2em;
+  }
+  .contato .container .container-infos {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .contato .container .container-infos .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .contato .container .container-infos .info-item div h2 {
+    font-size: 18px;
+  }
+  .contato .container .container-infos .info-item div p {
+    font-size: 13px;
+  }
+  .contato .container .container-forms form {
+    width: 400px;
+  }
+  .contato .container .container-forms form input,
+  .contato .container .container-forms form textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+  .contato .container .container-forms form textarea {
+    height: 120px;
+    max-height: none;
+    padding-bottom: 10px;
+  }
+  .contato .container .container-forms form button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 1023px) {
   .contato {
     padding-bottom: 3em;
   }
@@ -1058,23 +1234,23 @@ header .header-button a:hover {
   }
   .contato .container {
     flex-direction: column;
-    padding: 0 2em;
-    gap: 40px;
+    margin: 0 1.5em;
+    gap: 30px;
   }
   .contato .container .container-infos {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
   .contato .container .container-infos .info-item {
-    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
   }
-  .contato .container .container-infos h2 {
+  .contato .container .container-infos .info-item div h2 {
     font-size: 18px;
-    padding: 0;
   }
-  .contato .container .container-infos p {
-    font-size: 16px;
-    max-width: 300px;
+  .contato .container .container-infos .info-item div p {
+    font-size: 13px;
   }
   .contato .container .container-forms {
     width: 100%;

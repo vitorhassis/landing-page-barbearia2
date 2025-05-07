@@ -7,6 +7,7 @@
   color: white;
   padding-left: 12em;
   padding-bottom: 13em;
+  margin-top: -1px;
 
   .sobre-img {
     position: relative;
@@ -96,7 +97,7 @@
     padding: 1em;
     text-align: center;
     justify-content: center;
-    max-width: 550px;
+    max-width: 650px;
 }
 
 .sobre .sobre-textos h1 {
@@ -135,5 +136,16 @@
       }
     }
   }
-
 } 
+
+@media screen and (max-width: 480px) {
+  .sobre {
+    .sobre-img {
+      img {
+        margin-top: 10em;
+        padding: 0;
+        width: 320px;
+      }
+    }
+  }
+}

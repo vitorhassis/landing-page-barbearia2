@@ -38,7 +38,7 @@
     gap: 30px;
 
     button {
-      margin: 0 223px;
+      margin: 0 10px;
       font-size: 2.5em;
       color: $highlight;
       height: 50px;
@@ -62,7 +62,7 @@
 
       .carrossel-wrapper {
         display: flex;
-        gap: 100px;
+        gap: 30px;
         transition: transform 0.5s ease;
         will-change: transform;
 
@@ -125,34 +125,100 @@
 }
 
 @media screen and (max-width: 768px) {
-  .galeria {
-    .galeria-textos {
-      h1 {
-        font-size: 28px;
-      }
+  .galeria-carrossel {
+    flex-direction: row;
+    gap: 10px;
 
-      p {
-        font-size: 16px;
+    button {
+      font-size: 2em;
+      top: 45%;
+      transform: translateY(-50%);
+    }
+
+    #buttonLeft {
+      left: -10px;
+    }
+
+    #buttonRight {
+      right: -10px;
+    }
+
+    .carrossel-container {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+
+    .carrossel-wrapper {
+      gap: 20px;
+    }
+
+    .carrossel-itens {
+      min-width: 100% !important; // Força 1 por vez
+    }
+  }
+
+  .carrossel-itens-textos {
+    padding: 30px 20px;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 375px) {
+  .galeria-carrossel {
+    flex-direction: row;
+    gap: 10px;
+
+    button {
+      font-size: 2em;
+      top: 45%;
+      transform: translateY(-50%);
+    }
+
+    #buttonLeft {
+      left: -10px;
+    }
+
+    #buttonRight {
+      right: -10px;
+    }
+
+    .carrossel-container {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+
+    .carrossel-wrapper {
+      gap: 0px;
+    }
+
+    .carrossel-itens {
+      width: 10px;
+      height: 300px;
+
+      img {
+        width: 100px;
+        height: 100px;
       }
     }
   }
 
-  .carrossel-itens,
-  #buttonLeft,
-  #buttonRight {
-    display: none;
-  }
-}
+  .carrossel-itens-textos {
+    padding: 30px 20px;
 
-@media screen and (max-width: 480px) {
-  .galeria {
-    .galeria-textos {
-      h1 {
-        font-size: 28px;
-      }
-      p {
-        font-size: 16px;
-      }
+    h3 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
     }
   }
 }
