@@ -1,10 +1,6 @@
-.contato,
-.container {
-  background-color: #000000;
-}
-
 .contato {
   padding-bottom: 5em;
+  background-color: #000000;
 
   .contato-h1 {
     padding-bottom: 100px;
@@ -26,60 +22,67 @@
     }
   }
 
-  .container {
+  .contato-container {
     display: flex;
     justify-content: space-between;
-    //padding: 0 20em;
-    //gap: 350px;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2em;
 
     .container-infos {
       display: flex;
       flex-direction: column;
       gap: 30px;
+      flex: 1;
 
       .info-item {
         display: flex;
+        align-items: flex-start;
+        gap: 10px;
         color: $highlight;
 
         i {
-          padding-right: 20px;
           padding-top: 10px;
         }
-      }
 
-      h2 {
-        font-size: 20px;
-        color: $highlight;
-      }
+        div {
+          h2 {
+            font-size: 20px;
+            color: $highlight;
+          }
 
-      p {
-        font-size: 18px;
-        color: $white-subtitulo;
+          p {
+            font-size: 16px;
+            color: $white-subtitulo;
+          }
+        }
       }
     }
 
     .container-forms {
+      flex: 1;
+
       form {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 20px;
 
         input,
         textarea {
           color: $white;
-          width: 377px;
+          width: 100%;
+          max-width: 400px;
           padding: 10px;
           border: 1px solid gray;
           border-radius: 2px;
-          outline: none;
           background-color: $background-gray;
+          outline: none;
         }
 
         textarea {
-          padding-bottom: 80px;
-          max-width: 375px;
-          max-height: 8px;
+          min-height: 120px;
+          resize: vertical;
         }
 
         button {
@@ -90,8 +93,6 @@
           height: 40px;
           border: none;
           border-radius: 20px;
-          justify-content: center;
-          text-align: center;
           color: $white;
           background-color: $red-button;
         }
@@ -104,152 +105,10 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .contato {
-    padding-bottom: 3em;
-
-    .contato-h1 {
-      padding-bottom: 50px;
-
-      h1 {
-        font-size: 30px;
-        padding-top: 30px;
-      }
-
-      .linha {
-        width: 60px;
-      }
-    }
-
-    .container {
-      margin-left: 5em;
-      margin-right: 5em;
-      gap: 100px;
-
-      .container-infos {
-        align-items: flex-start;  // <- ALINHA ÍCONES E TEXTOS À ESQUERDA
-        text-align: left;         // <- ESSENCIAL PARA h2 e p
-
-        .info-item {
-          display: flex;
-          align-items: flex-start;
-          gap: 10px;
-
-          div {
-            h2 {
-              font-size: 18px;
-            }
-
-            p {
-              font-size: 13px;
-            }
-          }
-        }
-      }
-
-      .container-forms {
-        max-width: 90vw;
-
-        form {
-          width: 350px;
-          input,
-          textarea {
-            width: 100%;
-            max-width: 100%;
-          }
-
-          textarea {
-            height: 120px;
-            max-height: none;
-            padding-bottom: 10px;
-          }
-
-          button {
-            width: 100%;
-            max-width: 200px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .contato {
-    padding-bottom: 3em;
-
-    .contato-h1 {
-      padding-bottom: 50px;
-
-      h1 {
-        font-size: 30px;
-        padding-top: 30px;
-      }
-
-      .linha {
-        width: 60px;
-      }
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      gap: 850px; 
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 2em;
-
-      .container-infos {
-        align-items: flex-start;
-        text-align: left;
-
-        .info-item {
-          display: flex;
-          align-items: flex-start;
-          gap: 10px;
-
-          div {
-            h2 {
-              font-size: 18px;
-            }
-
-            p {
-              font-size: 13px;
-            }
-          }
-        }
-      }
-
-      .container-forms {
-        form {
-          width: 400px;
-
-          input,
-          textarea {
-            width: 100%;
-            max-width: 100%;
-          }
-
-          textarea {
-            height: 120px;
-            max-height: none;
-            padding-bottom: 10px;
-          }
-
-          button {
-            width: 100%;
-            max-width: 200px;
-          }
-        }
-      }
-    }
-  }
-}
-
-
+// Tablet e abaixo
 @media screen and (max-width: 1023px) {
   .contato {
-    padding-bottom: 3em;
+    padding: 3em 1.5em;
 
     .contato-h1 {
       padding-bottom: 50px;
@@ -264,20 +123,16 @@
       }
     }
 
-    .container {
-      flex-direction: column;
-      margin: 0 1.5em;
+    .contato-container {
       gap: 30px;
 
+      .container-infos,
+      .container-forms {
+        width: 100%;
+      }
+
       .container-infos {
-        align-items: flex-start;
-        text-align: left;
-
         .info-item {
-          display: flex;
-          align-items: flex-start;
-          gap: 10px;
-
           div {
             h2 {
               font-size: 18px;
@@ -291,21 +146,10 @@
       }
 
       .container-forms {
-        width: 100%;
-
         form {
-          width: 100%;
-
           input,
           textarea {
             width: 100%;
-            max-width: 100%;
-          }
-
-          textarea {
-            height: 120px;
-            max-height: none;
-            padding-bottom: 10px;
           }
 
           button {
@@ -317,6 +161,8 @@
     }
   }
 }
+
+
 
 
 

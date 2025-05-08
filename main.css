@@ -122,81 +122,9 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
-  .galeria-carrossel {
-    flex-direction: row;
-    gap: 10px;
-  }
-  .galeria-carrossel button {
-    font-size: 2em;
-    top: 45%;
-    transform: translateY(-50%);
-  }
-  .galeria-carrossel #buttonLeft {
-    left: -10px;
-  }
-  .galeria-carrossel #buttonRight {
-    right: -10px;
-  }
-  .galeria-carrossel .carrossel-container {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-  .galeria-carrossel .carrossel-wrapper {
-    gap: 20px;
-  }
-  .galeria-carrossel .carrossel-itens {
-    min-width: 100% !important;
-  }
-  .carrossel-itens-textos {
-    padding: 30px 20px;
-  }
-  .carrossel-itens-textos h3 {
-    font-size: 20px;
-  }
-  .carrossel-itens-textos p {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .galeria-carrossel {
-    flex-direction: row;
-    gap: 10px;
-  }
-  .galeria-carrossel button {
-    font-size: 2em;
-    top: 45%;
-    transform: translateY(-50%);
-  }
-  .galeria-carrossel #buttonLeft {
-    left: -10px;
-  }
-  .galeria-carrossel #buttonRight {
-    right: -10px;
-  }
-  .galeria-carrossel .carrossel-container {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-  .galeria-carrossel .carrossel-wrapper {
-    gap: 0px;
-  }
-  .galeria-carrossel .carrossel-itens {
-    width: 10px;
-    height: 300px;
-  }
-  .galeria-carrossel .carrossel-itens img {
-    width: 100px;
-    height: 100px;
-  }
-  .carrossel-itens-textos {
-    padding: 30px 20px;
-  }
-  .carrossel-itens-textos h3 {
-    font-size: 20px;
-  }
-  .carrossel-itens-textos p {
-    font-size: 14px;
+@media screen and (max-width: 570px) {
+  .galeria-carrossel, .carrossel-container, .carrossel-wrapper, .carrossel-itens, #buttonLeft, #buttonRight {
+    display: none;
   }
 }
 header {
@@ -1020,13 +948,9 @@ header .header-button a:hover {
     font-size: 16px;
   }
 }
-.contato,
-.container {
-  background-color: #000000;
-}
-
 .contato {
   padding-bottom: 5em;
+  background-color: #000000;
 }
 .contato .contato-h1 {
   padding-bottom: 100px;
@@ -1045,53 +969,61 @@ header .header-button a:hover {
   background-color: #bb9867;
   border-radius: 2px;
 }
-.contato .container {
+.contato .contato-container {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2em;
 }
-.contato .container .container-infos {
+.contato .contato-container .container-infos {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  flex: 1;
 }
-.contato .container .container-infos .info-item {
+.contato .contato-container .container-infos .info-item {
   display: flex;
+  align-items: flex-start;
+  gap: 10px;
   color: #bb9867;
 }
-.contato .container .container-infos .info-item i {
-  padding-right: 20px;
+.contato .contato-container .container-infos .info-item i {
   padding-top: 10px;
 }
-.contato .container .container-infos h2 {
+.contato .contato-container .container-infos .info-item div h2 {
   font-size: 20px;
   color: #bb9867;
 }
-.contato .container .container-infos p {
-  font-size: 18px;
+.contato .contato-container .container-infos .info-item div p {
+  font-size: 16px;
   color: #e0e0e0;
 }
-.contato .container .container-forms form {
+.contato .contato-container .container-forms {
+  flex: 1;
+}
+.contato .contato-container .container-forms form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
 }
-.contato .container .container-forms form input,
-.contato .container .container-forms form textarea {
+.contato .contato-container .container-forms form input,
+.contato .contato-container .container-forms form textarea {
   color: #ffffff;
-  width: 377px;
+  width: 100%;
+  max-width: 400px;
   padding: 10px;
   border: 1px solid gray;
   border-radius: 2px;
-  outline: none;
   background-color: #1f1f1f;
+  outline: none;
 }
-.contato .container .container-forms form textarea {
-  padding-bottom: 80px;
-  max-width: 375px;
-  max-height: 8px;
+.contato .contato-container .container-forms form textarea {
+  min-height: 120px;
+  resize: vertical;
 }
-.contato .container .container-forms form button {
+.contato .contato-container .container-forms form button {
   cursor: pointer;
   font-family: "Sora", sans-serif;
   font-weight: 800;
@@ -1099,128 +1031,16 @@ header .header-button a:hover {
   height: 40px;
   border: none;
   border-radius: 20px;
-  justify-content: center;
-  text-align: center;
   color: #ffffff;
   background-color: #8a1414;
 }
-.contato .container .container-forms form button:hover {
+.contato .contato-container .container-forms form button:hover {
   background-color: rgb(71, 4, 4);
 }
 
-@media screen and (min-width: 768px) {
-  .contato {
-    padding-bottom: 3em;
-  }
-  .contato .contato-h1 {
-    padding-bottom: 50px;
-  }
-  .contato .contato-h1 h1 {
-    font-size: 30px;
-    padding-top: 30px;
-  }
-  .contato .contato-h1 .linha {
-    width: 60px;
-  }
-  .contato .container {
-    margin-left: 5em;
-    margin-right: 5em;
-    gap: 100px;
-  }
-  .contato .container .container-infos {
-    align-items: flex-start;
-    text-align: left;
-  }
-  .contato .container .container-infos .info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .contato .container .container-infos .info-item div h2 {
-    font-size: 18px;
-  }
-  .contato .container .container-infos .info-item div p {
-    font-size: 13px;
-  }
-  .contato .container .container-forms {
-    max-width: 90vw;
-  }
-  .contato .container .container-forms form {
-    width: 350px;
-  }
-  .contato .container .container-forms form input,
-  .contato .container .container-forms form textarea {
-    width: 100%;
-    max-width: 100%;
-  }
-  .contato .container .container-forms form textarea {
-    height: 120px;
-    max-height: none;
-    padding-bottom: 10px;
-  }
-  .contato .container .container-forms form button {
-    width: 100%;
-    max-width: 200px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .contato {
-    padding-bottom: 3em;
-  }
-  .contato .contato-h1 {
-    padding-bottom: 50px;
-  }
-  .contato .contato-h1 h1 {
-    font-size: 30px;
-    padding-top: 30px;
-  }
-  .contato .contato-h1 .linha {
-    width: 60px;
-  }
-  .contato .container {
-    display: flex;
-    justify-content: center;
-    gap: 850px;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2em;
-  }
-  .contato .container .container-infos {
-    align-items: flex-start;
-    text-align: left;
-  }
-  .contato .container .container-infos .info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .contato .container .container-infos .info-item div h2 {
-    font-size: 18px;
-  }
-  .contato .container .container-infos .info-item div p {
-    font-size: 13px;
-  }
-  .contato .container .container-forms form {
-    width: 400px;
-  }
-  .contato .container .container-forms form input,
-  .contato .container .container-forms form textarea {
-    width: 100%;
-    max-width: 100%;
-  }
-  .contato .container .container-forms form textarea {
-    height: 120px;
-    max-height: none;
-    padding-bottom: 10px;
-  }
-  .contato .container .container-forms form button {
-    width: 100%;
-    max-width: 200px;
-  }
-}
 @media screen and (max-width: 1023px) {
   .contato {
-    padding-bottom: 3em;
+    padding: 3em 1.5em;
   }
   .contato .contato-h1 {
     padding-bottom: 50px;
@@ -1232,43 +1052,24 @@ header .header-button a:hover {
   .contato .contato-h1 .linha {
     width: 60px;
   }
-  .contato .container {
-    flex-direction: column;
-    margin: 0 1.5em;
+  .contato .contato-container {
     gap: 30px;
   }
-  .contato .container .container-infos {
-    align-items: flex-start;
-    text-align: left;
+  .contato .contato-container .container-infos,
+  .contato .contato-container .container-forms {
+    width: 100%;
   }
-  .contato .container .container-infos .info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .contato .container .container-infos .info-item div h2 {
+  .contato .contato-container .container-infos .info-item div h2 {
     font-size: 18px;
   }
-  .contato .container .container-infos .info-item div p {
+  .contato .contato-container .container-infos .info-item div p {
     font-size: 13px;
   }
-  .contato .container .container-forms {
+  .contato .contato-container .container-forms form input,
+  .contato .contato-container .container-forms form textarea {
     width: 100%;
   }
-  .contato .container .container-forms form {
-    width: 100%;
-  }
-  .contato .container .container-forms form input,
-  .contato .container .container-forms form textarea {
-    width: 100%;
-    max-width: 100%;
-  }
-  .contato .container .container-forms form textarea {
-    height: 120px;
-    max-height: none;
-    padding-bottom: 10px;
-  }
-  .contato .container .container-forms form button {
+  .contato .contato-container .container-forms form button {
     width: 100%;
     max-width: 200px;
   }
