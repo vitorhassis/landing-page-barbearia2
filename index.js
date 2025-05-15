@@ -26,17 +26,16 @@ function getResponsiveConfig() {
 
 function updateTransform() {
   const { gap, itemsPerView } = getResponsiveConfig();
-  const itemWidth = wrapper.clientWidth / itemsPerView;
-  const translateX = -(itemWidth + gap) * index;
+  const item = items[0];
+
+  const itemWidth = item.getBoundingClientRect().width;
+  const translateX = -index * (itemWidth + gap);
+
   wrapper.style.transform = `translateX(${translateX}px)`;
 }
 
 buttonRight.addEventListener("click", () => {
-  const { itemsPerView, gap } = getResponsiveConfig(); // ADICIONA o gap aqui!
-  const visibleArea = wrapper.clientWidth;
-  const itemWidth = items[0].getBoundingClientRect().width;
-
-  // Cálculo seguro do índice máximo
+  const { itemsPerView } = getResponsiveConfig();
   const maxIndex = totalItems - itemsPerView;
 
   if (index < maxIndex) index++;

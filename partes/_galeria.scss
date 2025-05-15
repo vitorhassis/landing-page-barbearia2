@@ -71,7 +71,7 @@
           text-align: center;
           justify-items: center;
           border: 1px solid $gray-border;
-          min-width: 33.3%;
+          min-width: 280px;
           flex-shrink: 0;
           box-sizing: border-box;
 
@@ -85,7 +85,7 @@
 
           .detalhe-circulo {
             position: absolute;
-            top: 65%;
+            top: 62.5%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 42px;
@@ -124,58 +124,59 @@
   }
 }
 
-.gallery-section { 
-  display: none;
-}
-
-@media screen and (max-width: 570px) {
-  .galeria-carrossel, .carrossel-container, .carrossel-wrapper, .carrossel-itens, #buttonLeft, #buttonRight {
+/* Oculta o carrossel manual (desktop) em telas menores e adiciona transição suave no Bootstrap */
+@media (max-width: 768px) {
+  .galeria-carrossel,
+  .carrossel-container,
+  .carrossel-wrapper,
+  .carrossel-itens,
+  #buttonLeft,
+  #buttonRight {
     display: none;
   }
 
-  .gallery-section { 
-    display: block;
-  padding: 2em;
-  text-align: center;
-
-  h2 {
-    color: #fff;
-    font-size: 2em;
-    margin-bottom: 1em;
-  }
-
-  .gallery-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    .large {
-      flex: 2;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-    }
-
-    .gallery-column {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-
-      .gallery-item {
-        img {
-          width: 100%;
-          height: 100%;
-          border-radius: 10px;
-          object-fit: cover;
-        }
-      }
-    }
+  .carousel-item {
+    transition: transform 0.4s ease-in-out !important;
   }
 }
+
+/* Garante que a seção de galeria duplicada (se houver) fique oculta */
+.gallery-section {
+  display: none;
+}
+
+/* Imagem padrão do carrossel (mobile) */
+.img-carrossel {
+  max-width: 85vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  image-rendering: crisp-edges;
+}
+
+/* Telas até 543px */
+@media (max-width: 543px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none !important;
+  }
+
+  .img-carrossel {
+    width: 450px !important;
+  }
+}
+
+/* Telas até 400px */
+@media (max-width: 400px) {
+  .img-carrossel {
+    width: 340px !important;
+  }
+}
+
+/* Telas até 360px */
+@media (max-width: 360px) {
+  .img-carrossel {
+    width: 290px !important;
+  }
 }
 

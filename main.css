@@ -77,7 +77,7 @@
   text-align: center;
   justify-items: center;
   border: 1px solid #CDCDCD;
-  min-width: 33.3%;
+  min-width: 280px;
   flex-shrink: 0;
   box-sizing: border-box;
 }
@@ -92,7 +92,7 @@
 }
 .galeria .galeria-carrossel .carrossel-container .carrossel-wrapper .carrossel-itens .detalhe-circulo {
   position: absolute;
-  top: 65%;
+  top: 62.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 42px;
@@ -122,52 +122,54 @@
   margin: 0 auto;
 }
 
+/* Oculta o carrossel manual (desktop) em telas menores e adiciona transição suave no Bootstrap */
+@media (max-width: 768px) {
+  .galeria-carrossel,
+  .carrossel-container,
+  .carrossel-wrapper,
+  .carrossel-itens,
+  #buttonLeft,
+  #buttonRight {
+    display: none;
+  }
+  .carousel-item {
+    transition: transform 0.4s ease-in-out !important;
+  }
+}
+/* Garante que a seção de galeria duplicada (se houver) fique oculta */
 .gallery-section {
   display: none;
 }
 
-@media screen and (max-width: 570px) {
-  .galeria-carrossel, .carrossel-container, .carrossel-wrapper, .carrossel-itens, #buttonLeft, #buttonRight {
-    display: none;
+/* Imagem padrão do carrossel (mobile) */
+.img-carrossel {
+  max-width: 85vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  image-rendering: crisp-edges;
+}
+
+/* Telas até 543px */
+@media (max-width: 543px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none !important;
   }
-  .gallery-section {
-    display: block;
-    padding: 2em;
-    text-align: center;
+  .img-carrossel {
+    width: 450px !important;
   }
-  .gallery-section h2 {
-    color: #fff;
-    font-size: 2em;
-    margin-bottom: 1em;
+}
+/* Telas até 400px */
+@media (max-width: 400px) {
+  .img-carrossel {
+    width: 340px !important;
   }
-  .gallery-section .gallery-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .gallery-section .gallery-grid .large {
-    flex: 2;
-  }
-  .gallery-section .gallery-grid .large img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 10px;
-  }
-  .gallery-section .gallery-grid .gallery-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .gallery-section .gallery-grid .gallery-column .gallery-item img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    -o-object-fit: cover;
-       object-fit: cover;
+}
+/* Telas até 360px */
+@media (max-width: 360px) {
+  .img-carrossel {
+    width: 290px !important;
   }
 }
 header {
@@ -568,7 +570,7 @@ header .header-button a:hover {
   height: 342px;
 }
 .servicos-container .info-hover {
-  height: 302px;
+  height: 343px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -587,11 +589,12 @@ header .header-button a:hover {
   padding-bottom: 30px;
 }
 .servicos-container .info-hover p {
-  font-size: 14px;
+  font-size: 16px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 .servicos-container .info-hover span {
+  font-size: 18px;
   color: #bb9867;
 }
 .servicos-container .imagem-wrapper:hover .info-hover {
@@ -675,8 +678,8 @@ header .header-button a:hover {
     position: absolute;
     bottom: 0;
     left: 0em;
-    width: 348px;
-    height: 303px;
+    width: 387px;
+    height: 343px;
     right: 0;
     background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
     color: white;
@@ -712,12 +715,6 @@ header .header-button a:hover {
     background-color: gray;
   }
 }
-@media screen and (min-width: 769px) {
-  .imagem-wrapper:hover .info-hover {
-    opacity: 1;
-    pointer-events: all;
-  }
-}
 @media screen and (min-width: 811px) {
   .icone-preco {
     display: none;
@@ -751,7 +748,7 @@ header .header-button a:hover {
     color: #ffffff;
     border: 1px solid #ffffff;
     border-radius: 50%;
-    height: 10px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -763,8 +760,8 @@ header .header-button a:hover {
     position: absolute;
     bottom: 0;
     left: 4.55em;
-    width: 310px;
-    height: 270px;
+    width: 350px;
+    height: 310px;
     right: 0;
     background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
     color: white;
@@ -783,7 +780,7 @@ header .header-button a:hover {
     font-size: 18px;
   }
   .serviços .servicos-container .info-hover p {
-    font-size: 12px;
+    font-size: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -822,7 +819,7 @@ header .header-button a:hover {
     border: 1px solid #ffffff;
     border-radius: 50%;
     width: 33px;
-    height: 10px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -833,9 +830,9 @@ header .header-button a:hover {
     height: 157px;
     position: absolute;
     bottom: 0;
-    left: 2.3em;
-    width: 260px;
-    height: 226px;
+    left: 0.7em;
+    width: 350px;
+    height: 310px;
     right: 0;
     background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
     color: white;
@@ -903,9 +900,9 @@ header .header-button a:hover {
     height: 238px;
     position: absolute;
     bottom: 0;
-    left: 3em;
-    width: 212px;
-    height: 181px;
+    left: 2.7em;
+    width: 250px;
+    height: 222px;
     right: 0;
     background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
     color: white;
@@ -924,8 +921,6 @@ header .header-button a:hover {
   }
   .serviços .servicos-container .info-hover p {
     font-size: 12px;
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
   .serviços .servicos-container .info-hover span {
     color: #bb9867;
