@@ -3,11 +3,11 @@
   background-color: #000000;
 
   .contato-h1 {
-    padding-bottom: 100px;
+    padding-bottom: 60px;
 
     h1 {
       padding-top: 45px;
-      padding-bottom: 15px;
+      padding-bottom: 10px;
       font-size: 40px;
       text-align: center;
       color: $white;
@@ -90,10 +90,9 @@
           cursor: pointer;
           font-family: "Sora", sans-serif;
           font-weight: 800;
-          width: 180px;
-          height: 40px;
           border: none;
-          border-radius: 20px;
+          border-radius: 50px;
+          padding: 10px;
           color: $white;
           background-color: $red-button;
           align-self: center;
@@ -111,23 +110,25 @@
   .contato-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 0 1em;
 
     .container-forms {
       width: 100%;
+      display: flex;
+      justify-content: center; // garante que o form fique centralizado
 
       form {
         display: flex;
         flex-direction: column;
         gap: 20px;
         width: 100%;
-        max-width: 100%;
+        max-width: 400px; // define largura máxima real
         padding: 0;
 
         input,
         textarea {
           width: 100%;
-          max-width: 100%;
           color: $white;
           padding: 10px;
           border: 1px solid gray;
@@ -161,5 +162,3 @@
     }
   }
 }
-
-

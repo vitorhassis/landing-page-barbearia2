@@ -2,133 +2,83 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10em;
+  gap: 6em;
   background-color: #000000;
   color: white;
-  padding-left: 12em;
-  padding-bottom: 13em;
-  margin-top: -1px;
+  padding: 5em 3em;
+  flex-wrap: wrap; // evita quebra feia em telas médias
+  padding-bottom: 15em;
 
   .sobre-img {
     position: relative;
-    margin-top: -100px;
+    margin-top: -60px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
   }
 
   .sobre-textos {
     max-width: 800px;
-    margin: 0 auto;
-    padding-right: 10em;
-    padding-bottom: 5em;
+    text-align: center;
 
     h1 {
       font-size: 47px;
-      text-align: center;
       margin-bottom: 20px;
     }
 
     p {
       font-size: 20px;
-      line-height: 175%;
-      text-align: center;
+      line-height: 1.75;
+      margin: 0 auto;
     }
   }
 }
 
+// ===== TABLET =====
 @media screen and (max-width: 1024px) {
-
   .sobre {
-    display: flex;
     flex-direction: column;
-    padding: 0;
-    gap: 7em;
-    align-items: center;
-    text-align: center;
-    
-  }
-  
-  .sobre-img {
-    img {
-      width: 36em;
-      padding-top: 15em;
-    }
-  }
-  
-  .sobre .sobre-textos {
-      padding: 0;
-      text-align: center;
-      justify-content: center;
-      max-width: 700px;
-  }
-  
-  .sobre .sobre-textos h1 {
-    font-size: 44px;
-  }
-  
-  .sobre .sobre-textos p {
-    padding-top: 1em;
-    font-size: 20px;
-    margin: 0 auto;
-    padding-bottom: 7em;
-  }
+    gap: 5em;
+    padding: 3em 2em;
 
-
-}
-
-@media screen and (max-width: 768px) {
-
-.sobre {
-  display: flex;
-  padding: 0;
-  flex-direction: column;
-  gap: 7em;
-  align-items: center;
-  text-align: center;
-  
-}
-
-.sobre-img {
-  img {
-    width: 27em;
-    padding-top: 15em;
-  }
-}
-
-.sobre .sobre-textos {
-    padding: 1em;
-    text-align: center;
-    justify-content: center;
-    max-width: 650px;
-}
-
-.sobre .sobre-textos h1 {
-  font-size: 28px;
-}
-
-.sobre .sobre-textos p {
-  padding-top: 1em;
-  font-size: 16px;
-  margin: 0 auto;
-  padding-bottom: 7em;
-}
-
-}
-
-@media screen and (max-width: 480px) {
-
-  .sobre {
-    .sobre-img {
-      img {
-        margin-top: 10em;
-        padding: 0;
-        width: 400px;
-      }
+    .sobre-img img {
+      width: 80%;
+      margin-top: 4em;
     }
 
     .sobre-textos {
-      max-width: 380px;
+      max-width: 700px;
 
       h1 {
-        font-size: 29px;
+        font-size: 40px;
+      }
+
+      p {
+        font-size: 18px;
+        padding-bottom: 2em;
+      }
+    }
+  }
+}
+
+// ===== MOBILE =====
+@media screen and (max-width: 768px) {
+  .sobre {
+    padding: 2em 1em;
+
+    .sobre-img img {
+      width: 90%;
+      margin-top: 4em;
+    }
+
+    .sobre-textos {
+      max-width: 95vw;
+
+      h1 {
+        font-size: 28px;
       }
 
       p {
@@ -136,15 +86,25 @@
       }
     }
   }
-} 
+}
 
+// ===== SMALL DEVICES (celulares pequenos) =====
 @media screen and (max-width: 480px) {
   .sobre {
-    .sobre-img {
-      img {
-        margin-top: 10em;
-        padding: 0;
-        width: 320px;
+    .sobre-img img {
+      width: 100%;
+      margin-top: 3em;
+    }
+
+    .sobre-textos {
+      padding: 0 1em;
+
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 15px;
       }
     }
   }

@@ -1,6 +1,11 @@
 footer {
     background-color: $background-gray;
-    padding: 2em;
+    padding: 1em;
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
   }
   
   .footer-section {

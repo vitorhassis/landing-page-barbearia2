@@ -368,11 +368,11 @@
         }
 
         h3 {
-          font-size: 18px;
+          font-size: 23px;
         }
 
         p {
-          font-size: 12px;
+          font-size: 16px;
           padding-top: 10px;
           padding-bottom: 10px;
         }
@@ -429,8 +429,8 @@
             color: $white;
             border: 1px solid $white;
             border-radius: 50%;
-            width: 10px;
-            height: 10px;
+            width: 30px;
+            height: 30px;
             cursor: pointer;
           }
         }
@@ -440,7 +440,7 @@
         height: 238px;
         position: absolute;
         bottom: 0;
-        left: 2.7em;
+        left: 3em;
         width: 250px;
         height: 222px;
         right: 0;
@@ -453,16 +453,12 @@
         pointer-events: none;
         transition: opacity 0.3s ease;
 
-        .info-hover-text {
-          padding-bottom: 30px;
-        }
-
         h3 {
-          font-size: 16px;
+          font-size: 18px;
         }
 
         p {
-          font-size: 12px;
+          font-size: 13px;
         }
 
         span {
