@@ -985,6 +985,7 @@ h1 {
   .serviços .servicos-container .info-hover.ativo {
     opacity: 1 !important;
     pointer-events: all;
+    visibility: visible;
   }
 }
 .sobre {
