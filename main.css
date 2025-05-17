@@ -291,9 +291,14 @@ p {
     right: 7em;
   }
 }
+@media (max-width: 1200px) {
+  .img-carrossel {
+    max-width: 40vw;
+  }
+}
 @media (max-width: 991px) {
   .img-carrossel {
-    max-width: 75vw;
+    max-width: 45vw;
   }
   .carousel-control-prev-icon {
     left: 5em;
@@ -315,7 +320,7 @@ p {
 }
 @media (max-width: 768px) {
   .img-carrossel {
-    max-width: 85vw;
+    max-width: 58vw;
   }
   .carousel-control-prev-icon {
     left: 0em;
@@ -328,7 +333,7 @@ p {
 }
 @media (max-width: 576px) {
   .img-carrossel {
-    max-width: 90vw;
+    max-width: 75vw;
   }
   .carousel-control-prev,
   .carousel-control-next {
