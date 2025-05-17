@@ -1,24 +1,25 @@
 header {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 100px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 15vh;
   background-color: $black-dark;
-  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 15vh;
+  justify-content: space-between;
   margin-bottom: -1px;
-  padding-right: 2.3em;
+  padding: 0 100px;
   padding-left: 0;
+  padding-right: 2.3em;
+  text-align: center;
+  width: 100%;
 
   #header-img {
-    width: auto;
     height: 15vh;
     margin-top: -1px;
+    width: auto;
   }
 
   .header-icon-cell {
+    color: $white;
     display: flex;
     gap: 18px;
 
@@ -28,25 +29,39 @@ header {
   }
 
   .header-button {
-    display: flex;
     align-items: center;
-    justify-content: center;
     background-color: transparent;
+    display: flex;
+    justify-content: center;
 
     a {
-      font-family: "Sora", sans-serif;
-      color: $white-dark;
-      text-decoration: none;
-      padding: 15px 30px;
       border: 1px solid $gray;
       border-radius: 5px;
+      color: $white-dark;
+      font-family: "Sora", sans-serif;
+      padding: 15px 30px;
+      text-decoration: none;
       transition: background-color 0.3s ease, border 0.3s ease;
 
       &:hover {
-        border: 1px solid $white;
         background-color: $highlight;
+        border: 1px solid $white;
       }
     }
+  }
+
+  .header-icon-cell i:hover {
+    animation: translateY 0.8s infinite alternate;
+    color: $red-light;
+  }
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
   }
 }
 
@@ -71,7 +86,6 @@ header {
   }
 }
 
-// Extra small devices
 @media screen and (max-width: 480px) {
   header {
     padding-right: 1em;

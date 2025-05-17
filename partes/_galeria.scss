@@ -13,18 +13,18 @@
     }
 
     p {
-      font-size: 18px;
       color: $white-subtitulo;
+      font-size: 18px;
       padding-bottom: 20px;
     }
 
     .galeria-bg-title {
+      color: $gray-bg-title;
+      font-size: 150px;
+      left: 67%;
       position: absolute;
       top: 53%;
-      left: 67%;
       transform: translate(-50%, -50%);
-      font-size: 150px;
-      color: $gray-bg-title;
       z-index: 0;
     }
   }
@@ -33,30 +33,32 @@
 .carousel-item {
   transition: transform 0.4s ease-in-out !important;
 }
+
 .img-carrossel {
+  display: block;
+  height: auto;
+  image-rendering: auto;
+  margin: 0 auto;
   max-width: 85vw;
   width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  image-rendering: auto;
 }
+
+// MEDIA QUERIES
 
 @media (min-width: 1201px) {
   .img-carrossel {
     max-width: 600px;
   }
 
-   .carousel-control-prev-icon {
-    position: relative;
+  .carousel-control-prev-icon {
     left: 20em;
+    position: relative;
   }
 
   .carousel-control-next-icon {
     position: relative;
     right: 20em;
   }
-
 }
 
 @media (max-width: 1200px) {
@@ -64,18 +66,16 @@
     max-width: 600px;
   }
 
-   .carousel-control-prev-icon {
-    position: relative;
+  .carousel-control-prev-icon {
     left: 7em;
+    position: relative;
   }
 
   .carousel-control-next-icon {
     position: relative;
     right: 7em;
   }
-
 }
-
 
 @media (max-width: 991px) {
   .img-carrossel {
@@ -83,8 +83,8 @@
   }
 
   .carousel-control-prev-icon {
-    position: relative;
     left: 5em;
+    position: relative;
   }
 
   .carousel-control-next-icon {
@@ -94,17 +94,16 @@
 
   .galeria {
     .galeria-bg-title {
+      color: $gray-bg-title;
+      font-size: 10px;
+      left: 67%;
       position: absolute;
       top: 53%;
-      left: 67%;
       transform: translate(-50%, -50%);
-      font-size: 10px;
-      color: $gray-bg-title;
       z-index: 0;
     }
   }
 }
-
 
 @media (max-width: 768px) {
   .img-carrossel {
@@ -112,24 +111,20 @@
   }
 
   .carousel-control-prev-icon {
-    position: relative;
     left: 0em;
+    position: relative;
   }
 
   .carousel-control-next-icon {
     position: relative;
     right: 0em;
   }
-
 }
 
-
 @media (max-width: 576px) {
-
   .img-carrossel {
     max-width: 90vw;
   }
-
 
   .carousel-control-prev,
   .carousel-control-next {

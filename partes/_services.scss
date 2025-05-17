@@ -1,49 +1,51 @@
 .servicos-container {
   background-color: $background-gray;
-      padding-bottom: 40px;
+  padding-bottom: 40px;
 
   .serviços-textos {
-    text-align: center;
     justify-content: center;
+    text-align: center;
 
     h1 {
       color: $white;
     }
 
     p {
-      font-size: 18px;
       color: $white-subtitulo;
+      font-size: 18px;
       padding-bottom: 20px;
     }
   }
 
   .serviços-grid {
     display: flex;
-    justify-content: center;
     gap: 30px;
+    justify-content: center;
   }
 
   .imagem-wrapper {
-    position: relative;
     height: 342px;
+    position: relative;
+
+    &:hover .info-hover {
+      border: none;
+      opacity: 1;
+    }
   }
 
   .info-hover {
-    height: 343px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
+    bottom: 0;
     color: white;
     display: flex;
-
     flex-direction: column;
+    height: 343px;
     justify-content: flex-end;
-    padding: 20px;
-
+    left: 0;
     opacity: 0;
+    padding: 20px;
+    position: absolute;
+    right: 0;
     transition: opacity 0.4s ease;
 
     .info-hover-text {
@@ -52,33 +54,26 @@
 
     p {
       font-size: 16px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding: 10px 0;
     }
 
     span {
-      font-size: 18px;
       color: $highlight;
+      font-size: 18px;
     }
   }
 
-  .imagem-wrapper:hover .info-hover {
-    opacity: 1;
-    border: none;
-  }
-
   .line {
+    background-color: gray;
     height: 2px;
     width: 100%;
-    background-color: gray;
   }
 }
 
-// Layout normal para desktop
 .servicos-wrapper {
   display: flex;
-  justify-content: center;
   gap: 30px;
+  justify-content: center;
   padding: 2em;
 
   .servico-item {
@@ -92,38 +87,34 @@
     }
 
     img {
-      width: 100%;
       height: auto;
       object-fit: cover;
+      width: 100%;
     }
 
     .texto-hover {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      text-align: center;
-      margin-top: 10px;
       color: $highlight;
       font-size: 18px;
+      margin-top: 10px;
+      opacity: 0;
+      text-align: center;
+      transition: opacity 0.3s ease;
     }
   }
 }
 
+// Esconde ícone preço no desktop
+@media screen and (min-width: 811px) {
+  .icone-preco {
+    display: none;
+  }
+}
+
+// Responsivo até 1024px
 @media screen and (max-width: 1024px) {
   .servicos-container {
-    background-color: $background-gray;
-
-    .serviços-textos {
-      text-align: center;
-      justify-content: center;
-
-      h1 {
-        color: $white;
-      }
-
-      p {
-        font-size: 16px;
-        color: $white-subtitulo;
-      }
+    .serviços-textos p {
+      font-size: 16px;
     }
 
     .serviços-grid {
@@ -134,33 +125,31 @@
     }
 
     .imagem-wrapper {
-      position: relative;
       height: auto;
+      position: relative;
 
       img {
-        width: 100%;
-        height: auto;
         display: block;
+        height: auto;
         object-fit: cover;
+        width: 100%;
       }
     }
 
     .info-hover {
-      height: 157px;
-      position: absolute;
-      bottom: 0;
-      left: 0em;
-      width: 387px;
-      height: 343px;
-      right: 0;
       background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
+      bottom: 0;
       color: white;
       display: flex;
       flex-direction: column;
+      height: 343px;
       justify-content: flex-end;
-      padding: 20px;
+      left: 0;
       opacity: 0;
+      padding: 20px;
       pointer-events: none;
+      position: absolute;
+      right: 0;
       transition: opacity 0.3s ease;
 
       .info-hover-text {
@@ -173,8 +162,7 @@
 
       p {
         font-size: 16px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 10px 0;
       }
 
       span {
@@ -183,85 +171,68 @@
     }
 
     .imagem-wrapper:hover .info-hover {
-      opacity: 1;
       border: none;
-    }
-
-    .line {
-      height: 2px;
-      width: 100%;
-      background-color: gray;
+      opacity: 1;
     }
   }
 }
 
-
-@media screen and (min-width: 811px) {
-  .icone-preco {
-    display: none;
-  }
-}
-
+// Responsivo até 811px (mobile com botão de preço)
 @media screen and (max-width: 811px) {
   .serviços {
     .servicos-container {
-      .serviços-textos {
-
-        p {
-          font-size: 16px;
-        }
+      .serviços-textos p {
+        font-size: 16px;
       }
 
       .serviços-grid {
+        align-items: center;
         display: flex;
         flex-direction: column;
         gap: 33px;
-        align-items: center;
       }
 
       .imagem-wrapper {
         .servico-item-mobile {
-          display: flex;
           align-items: center;
-          justify-content: center;
+          display: flex;
           gap: 40px;
+          justify-content: center;
           margin-right: 4.5em;
 
           img {
-            width: 350px;            
+            width: 350px;
           }
 
           .icone-preco {
+            align-items: center;
             background-color: transparent;
-            color: $white;
             border: 1px solid $white;
             border-radius: 50%;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            color: $white;
             cursor: pointer;
+            display: flex;
+            height: 30px;
+            justify-content: center;
             padding: 10px;
           }
         }
       }
 
       .info-hover {
-        height: 157px;
-        position: absolute;
+        background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
         bottom: 0;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        height: 310px;
+        justify-content: flex-end;
         left: 4.55em;
-        width: 350px;
-        height: 310px;
-        right: 0;
-        background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 20px;
         opacity: 0;
+        padding: 20px;
         pointer-events: none;
+        position: absolute;
+        right: 0;
         transition: opacity 0.3s ease;
 
         .info-hover-text {
@@ -274,8 +245,7 @@
 
         p {
           font-size: 15px;
-          padding-top: 10px;
-          padding-bottom: 10px;
+          padding: 10px 0;
         }
 
         span {
@@ -291,170 +261,119 @@
   }
 }
 
+// Responsivo até 589px
 @media screen and (max-width: 589px) {
-  .serviços {
-    .servicos-container {
-      .serviços-textos {
+  .serviços .servicos-container {
+    .serviços-grid {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 33px;
+    }
 
-        p {
-          font-size: 16px;
-        }
-      }
+    .imagem-wrapper .servico-item-mobile {
+      align-items: center;
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-right: 5.5em;
+      width: 300px;
 
-      .serviços-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 33px;
+      .icone-preco {
         align-items: center;
-      }
-
-      .imagem-wrapper {
-        .servico-item-mobile {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 40px;
-          margin-right: 5.5em;
-          width: 300px;
-
-          .icone-preco {
-            background-color: transparent;
-            color: $white;
-            border: 1px solid $white;
-            border-radius: 50%;
-            width: 33px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            padding: 10px;
-          }
-        }
-      }
-
-      .info-hover {
-        height: 157px;
-        position: absolute;
-        bottom: 0;
-        left: 0.7em;
-        width: 350px;
-        height: 310px;
-        right: 0;
-        background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
-        color: white;
+        background-color: transparent;
+        border: 1px solid $white;
+        border-radius: 50%;
+        color: $white;
+        cursor: pointer;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 20px;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
+        height: 30px;
+        justify-content: center;
+        padding: 10px;
+        width: 33px;
+      }
+    }
 
-        .info-hover-text {
-          padding-bottom: 20px;
-        }
+    .info-hover {
+      height: 310px;
+      left: 0.7em;
+      width: 350px;
 
-        h3 {
-          font-size: 23px;
-        }
-
-        p {
-          font-size: 16px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-        }
-
-        span {
-          color: $highlight;
-        }
+      h3 {
+        font-size: 23px;
       }
 
-      .info-hover.ativo {
-        opacity: 1 !important;
-        pointer-events: all;
+      p {
+        font-size: 16px;
       }
     }
   }
 }
 
-
+// Responsivo até 545px
 @media screen and (max-width: 545px) {
-  .serviços {
-    .servicos-container {
-      .serviços-textos {
+  .serviços .servicos-container {
+    .serviços-grid {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 33px;
+    }
 
-        p {
-          font-size: 15px;
-        }
-      }
+    .imagem-wrapper .servico-item-mobile {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin: 0 2.7em 0 0;
 
-      .serviços-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 33px;
-        align-items: center;
-      }
-
-      .imagem-wrapper {
-        .servico-item-mobile {
-          display: flex;
-          align-items: center;
-          justify-content: center;     
-          margin: 0;  
-          gap: 15px;
-          margin-right: 2.7em;
-
-          img {
-            width: 250px;            
-          }
-
-          .icone-preco {
-            background-color: transparent;
-            color: $white;
-            border: 1px solid $white;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-          }
-        }
-      }
-
-      .info-hover {
-        height: 238px;
-        position: absolute;
-        bottom: 0;
-        left: 3em;
+      img {
         width: 250px;
-        height: 222px;
-        right: 0;
-        background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-
-        h3 {
-          font-size: 18px;
-        }
-
-        p {
-          font-size: 13px;
-        }
-
-        span {
-          color: $highlight;
-        }
       }
 
-      .info-hover.ativo {
-        opacity: 1 !important;
-        pointer-events: all;
+      .icone-preco {
+        background-color: transparent;
+        border: 1px solid $white;
+        border-radius: 50%;
+        color: $white;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
       }
+    }
+
+    .info-hover {
+      background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
+      bottom: 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 222px;
+      justify-content: flex-end;
+      left: 3em;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      transition: opacity 0.3s ease;
+      width: 250px;
+
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      span {
+        color: $highlight;
+      }
+    }
+
+    .info-hover.ativo {
+      opacity: 1 !important;
+      pointer-events: all;
     }
   }
 }

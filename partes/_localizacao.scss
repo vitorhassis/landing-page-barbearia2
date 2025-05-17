@@ -3,55 +3,52 @@
   height: 42.5em;
 
   .localizacao-textos {
-    text-align: center;
     justify-content: center;
+    text-align: center;
 
     h1 {
       color: $white;
     }
 
     p {
-      padding-bottom: 20px;
-      font-size: 18px;
       color: $white-subtitulo;
+      font-size: 18px;
+      padding-bottom: 20px;
     }
 
     #localizacao-textos-p {
-      padding-bottom: 0;
-      margin-bottom: 0;
-      font-size: 20px;
       color: $white-subtitulo;
+      font-size: 20px;
+      margin-bottom: 0;
+      padding-bottom: 0;
       padding-top: 15px;
     }
   }
 }
 
 .line {
+  background-color: gray;
   height: 2px;
   width: 100%;
-  background-color: gray;
 }
 
+// MEDIA QUERIES
+
 @media screen and (max-width: 768px) {
-
   .localizacao {
-
     .localizacao-textos {
       p {
         font-size: 16px;
       }
 
       #localizacao-textos-p {
-       font-size: 18px;
-     }
+        font-size: 18px;
+      }
     }
   }
-
-
 }
 
 @media screen and (max-width: 488px) {
-
   .localizacao {
     padding: 0;
 
@@ -64,8 +61,5 @@
         font-size: 16px;
       }
     }
-
-
   }
-
 }

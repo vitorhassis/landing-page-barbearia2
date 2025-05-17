@@ -1,23 +1,23 @@
 .sobre {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10em;
   background-color: #000000;
   color: white;
-  padding: 5em 3em;
-  flex-wrap: wrap; // evita quebra feia em telas médias
-  padding-bottom: 15em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10em;
+  justify-content: center;
   margin-top: -1px;
+  padding: 5em 3em;
+  padding-bottom: 15em;
 
   .sobre-img {
-    position: relative;
     margin-top: -60px;
+    position: relative;
 
     img {
-      max-width: 100%;
-      height: auto;
       display: block;
+      height: auto;
+      max-width: 100%;
     }
   }
 
@@ -45,8 +45,8 @@
     padding: 3em 2em;
 
     .sobre-img img {
-      width: 80%;
       margin-top: 4em;
+      width: 80%;
     }
 
     .sobre-textos {
@@ -66,8 +66,8 @@
     padding: 2em 1em;
 
     .sobre-img img {
-      width: 90%;
       margin-top: 4em;
+      width: 90%;
     }
 
     .sobre-textos {
@@ -84,12 +84,12 @@
   }
 }
 
-// ===== SMALL DEVICES (celulares pequenos) =====
+// ===== SMALL DEVICES =====
 @media screen and (max-width: 480px) {
   .sobre {
     .sobre-img img {
-      width: 100%;
       margin-top: 3em;
+      width: 100%;
     }
 
     .sobre-textos {

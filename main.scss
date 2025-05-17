@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap');
+
+@import "partes/base";
 @import "partes/colors";
-@import "partes/reset";
+@import "partes/contato";
+@import "partes/footer";
 @import "partes/galeria";
 @import "partes/header";
 @import "partes/hero";
-@import "partes/sobre";
-@import "partes/services";
 @import "partes/localizacao";
-@import "partes/contato";
-@import "partes/base";
-@import "partes/footer"
+@import "partes/reset";
+@import "partes/services";
+@import "partes/sobre";
+
 
 

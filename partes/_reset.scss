@@ -17,10 +17,11 @@ h1 {
   h1 {
     font-size: 40px;
   }
+}
 
-  @media screen and (max-width: 810px) {
-    h1 {
-      font-size: 30px;
-    }
+@media screen and (max-width: 810px) {
+  h1 {
+    font-size: 30px;
   }
 }
+

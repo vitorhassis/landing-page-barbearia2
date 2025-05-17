@@ -1,31 +1,31 @@
 .contato {
-  padding-bottom: 2.5em;
   background-color: #000000;
+  padding-bottom: 2.5em;
 
   .contato-h1 {
     padding-bottom: 60px;
 
     h1 {
+      color: $white;
       padding-bottom: 10px;
       text-align: center;
-      color: $white;
     }
 
     .linha {
-      height: 2px;
-      width: 80px;
-      margin: -10px auto 0 auto;
       background-color: $highlight;
       border-radius: 2px;
+      height: 2px;
+      margin: -10px auto 0 auto;
+      width: 80px;
     }
   }
 
   .contato-container {
     display: flex;
+    gap: 4em;
     justify-content: space-between;
-    gap: 4em; // aumentado o espaçamento entre colunas
-    max-width: 1200px;
     margin: 0 auto;
+    max-width: 1200px;
     padding: 0 2em;
 
     .container-infos {
@@ -33,14 +33,14 @@
       flex-direction: column;
 
       .info-item {
-        display: flex;
         align-items: flex-start;
-        gap: 10px;
         color: $highlight;
+        display: flex;
+        gap: 10px;
 
         i {
-          padding-top: 10px;
           font-size: 20px;
+          padding-top: 10px;
         }
 
         div {
@@ -48,16 +48,15 @@
           flex-direction: column;
 
           h2 {
-            font-size: 20px;
             color: $highlight;
+            font-size: 20px;
             margin-bottom: 2px;
           }
 
           p {
-            font-size: 16px;
             color: $white-subtitulo;
-            margin: 0;
-            margin-bottom: 30px;
+            font-size: 16px;
+            margin: 0 0 30px 0;
           }
         }
       }
@@ -72,12 +71,12 @@
 
         input,
         textarea {
-          color: $white;
-          padding: 10px;
+          background-color: $background-gray;
           border: 1px solid gray;
           border-radius: 2px;
-          background-color: $background-gray;
+          color: $white;
           outline: none;
+          padding: 10px;
         }
 
         textarea {
@@ -85,15 +84,15 @@
         }
 
         button {
+          align-self: center;
+          background-color: $red-button;
+          border: none;
+          border-radius: 50px;
+          color: $white;
           cursor: pointer;
           font-family: "Sora", sans-serif;
           font-weight: 800;
-          border: none;
-          border-radius: 50px;
           padding: 10px;
-          color: $white;
-          background-color: $red-button;
-          align-self: center;
 
           &:hover {
             background-color: rgb(71, 4, 4);
@@ -106,41 +105,40 @@
 
 @media screen and (min-width: 1024px) {
   .container-forms form {
-    margin-left: 3em; 
+    margin-left: 3em;
   }
 }
 
-// Layout mobile
 @media screen and (max-width: 660px) {
   .contato-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 0 1em;
 
     .container-forms {
-      width: 100%;
       display: flex;
       justify-content: center;
+      width: 100%;
 
       form {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        width: 100%;
         max-width: 400px;
         padding: 0;
+        width: 100%;
 
         input,
         textarea {
-          width: 100%;
-          color: $white;
-          padding: 10px;
+          background-color: $background-gray;
           border: 1px solid gray;
           border-radius: 2px;
-          background-color: $background-gray;
-          outline: none;
           box-sizing: border-box;
+          color: $white;
+          outline: none;
+          padding: 10px;
+          width: 100%;
         }
 
         textarea {
@@ -148,16 +146,16 @@
         }
 
         button {
-          cursor: pointer;
-          font-family: "Sora", sans-serif;
-          font-weight: 800;
-          width: 180px;
-          height: 40px;
+          align-self: center;
+          background-color: $red-button;
           border: none;
           border-radius: 20px;
           color: $white;
-          background-color: $red-button;
-          align-self: center;
+          cursor: pointer;
+          font-family: "Sora", sans-serif;
+          font-weight: 800;
+          height: 40px;
+          width: 180px;
 
           &:hover {
             background-color: rgb(71, 4, 4);
