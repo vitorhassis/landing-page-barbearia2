@@ -10,29 +10,43 @@
   padding: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 800 !important;
 }
 
+h1 {
+  padding-top: 30px;
+}
+
+@media screen and (min-width: 811px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 811px) and (max-width: 810px) {
+  h1 {
+    font-size: 30px;
+  }
+}
 .galeria {
   background-color: #000000;
-  padding-bottom: 5em;
+  padding-bottom: 2.6em;
 }
 .galeria .galeria-textos {
   position: relative;
   text-align: center;
-  padding: 30px;
   z-index: 2;
 }
 .galeria .galeria-textos h1 {
   color: #ffffff;
-  font-size: 45px;
+  padding-top: 30px;
 }
 .galeria .galeria-textos p {
   font-size: 18px;
   color: #e0e0e0;
-  margin-top: 8px;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 }
 .galeria .galeria-textos .galeria-bg-title {
   position: absolute;
@@ -133,6 +147,8 @@ h1, h2, h3 {
   }
 }
 header {
+  width: 100%;
+  box-sizing: border-box;
   padding: 0 100px;
   display: flex;
   justify-content: space-between;
@@ -140,28 +156,21 @@ header {
   height: 15vh;
   background-color: #000000;
   text-align: center;
+  margin-bottom: -1px;
+  padding-right: 2.3em;
+  padding-left: 0;
 }
 header #header-img {
   width: auto;
   height: 15vh;
+  margin-top: -1px;
 }
-header .header-menu {
+header .header-icon-cell {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 18px;
 }
-header .header-menu ul {
-  display: flex;
-  gap: 40px;
-}
-header .header-menu ul li a {
-  font-weight: bold;
-  font-family: "Sora", sans-serif;
-  color: #edeaef;
-  text-decoration: none;
-}
-header .header-menu ul li a:hover {
-  color: rgb(175, 175, 175);
+header .header-icon-cell i {
+  font-size: 28px;
 }
 header .header-button {
   display: flex;
@@ -179,83 +188,35 @@ header .header-button a {
   transition: background-color 0.3s ease, border 0.3s ease;
 }
 header .header-button a:hover {
-  /*forma do Sass usar o hover*/
   border: 1px solid #ffffff;
   background-color: #bb9867;
 }
 
-.header-icon-cell {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  header {
-    display: flex;
-    padding: 0 50px 0px 50px;
+@media screen and (min-width: 768px) {
+  header .header-button {
+    display: none;
   }
+}
+@media screen and (max-width: 768px) {
   header .header-button {
     display: none;
   }
   header #header-img {
-    margin-left: -3em;
-  }
-  header .header-icon-cell {
-    display: flex;
-    gap: 18px;
-  }
-  header .header-icon-cell i {
-    font-size: 28px;
-  }
-}
-@media screen and (max-width: 720px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-  }
-  header #header-img {
-    margin-left: -2em;
-    margin-top: 3.5em;
-  }
-  header .header-icon-cell {
-    display: flex;
-    gap: 18px;
-    margin-top: 3.5em;
-  }
-  header .header-icon-cell i {
-    font-size: 28px;
+    margin-left: 0;
+    margin-top: 2em;
   }
 }
 @media screen and (max-width: 480px) {
   header {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
+    padding-right: 1em;
   }
-  header img {
-    margin-left: -3em;
-  }
-  header .header-icon-cell {
-    display: flex;
-    gap: 18px;
-    margin-top: 3.5em;
-  }
-  header .header-icon-cell i {
-    font-size: 28px;
-  }
-}
-@media screen and (max-width: 375px) {
-  header {
-    display: flex;
-    justify-content: space-between;
+  header #header-img {
+    margin-left: 0;
+    margin-top: 2em;
   }
   header .header-icon-cell {
-    display: flex;
     gap: 18px;
-    margin-top: 3.5em;
-  }
-  header .header-icon-cell i {
-    font-size: 28px;
+    margin-top: 2em;
   }
 }
 .hero {
@@ -270,7 +231,7 @@ header .header-button a:hover {
 }
 .hero .hero-title {
   margin-bottom: 2rem;
-  font-size: 2.7rem;
+  font-size: 40px;
   font-weight: 700;
   letter-spacing: 2px;
   line-height: 1.3;
@@ -284,14 +245,18 @@ header .header-button a:hover {
 .hero .hero-p {
   display: block;
   margin: 0 auto;
-  padding: 2em 1em 0 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 18px;
   max-width: 600px;
   font-family: sans-serif;
   font-weight: 600;
   text-align: center;
   line-height: 1.6;
+}
+.hero .hero-p p {
+  margin-bottom: 0;
 }
 .hero .hero-button {
   display: flex;
@@ -325,8 +290,7 @@ header .header-button a:hover {
     max-width: 90vw;
   }
   .hero .hero-p {
-    font-size: 16px;
-    padding-top: 2em;
+    font-size: 22px;
   }
   .hero .hero-button {
     margin-top: 2em;
@@ -341,12 +305,11 @@ header .header-button a:hover {
     background: url("/assets/imagens/fb8ca9bb2eb3f24f91863af43bfd8557 (1) 1.png") no-repeat center center/cover;
   }
   .hero .hero-title {
-    font-size: 32px;
+    font-size: 40px;
     margin-top: 4em;
   }
   .hero .hero-p {
-    font-size: 15px;
-    padding: 2em 1em 0 1em;
+    font-size: 20px;
     max-width: 90vw;
   }
   .hero .hero-button a {
@@ -356,16 +319,16 @@ header .header-button a:hover {
 }
 @media screen and (max-width: 480px) {
   .hero .hero-title {
-    font-size: 24px;
-    margin-top: 4em;
+    font-size: 27px;
+    margin-top: 1em;
   }
   .hero .hero-p {
-    font-size: 14px;
-    padding: 1.5em 1em 0 1em;
-    max-width: 95vw;
+    font-size: 18px;
+    padding-bottom: 1.5em;
+    max-width: 90vw;
   }
   .hero .hero-button a {
-    font-size: 15px;
+    font-size: 20px;
     padding: 15px 30px;
   }
 }
@@ -373,12 +336,13 @@ header .header-button a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6em;
+  gap: 10em;
   background-color: #000000;
   color: white;
   padding: 5em 3em;
   flex-wrap: wrap;
   padding-bottom: 15em;
+  margin-top: -1px;
 }
 .sobre .sobre-img {
   position: relative;
@@ -394,7 +358,6 @@ header .header-button a:hover {
   text-align: center;
 }
 .sobre .sobre-textos h1 {
-  font-size: 47px;
   margin-bottom: 20px;
 }
 .sobre .sobre-textos p {
@@ -416,9 +379,6 @@ header .header-button a:hover {
   .sobre .sobre-textos {
     max-width: 700px;
   }
-  .sobre .sobre-textos h1 {
-    font-size: 40px;
-  }
   .sobre .sobre-textos p {
     font-size: 18px;
     padding-bottom: 2em;
@@ -436,7 +396,7 @@ header .header-button a:hover {
     max-width: 95vw;
   }
   .sobre .sobre-textos h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
   .sobre .sobre-textos p {
     font-size: 16px;
@@ -450,30 +410,25 @@ header .header-button a:hover {
   .sobre .sobre-textos {
     padding: 0 1em;
   }
-  .sobre .sobre-textos h1 {
-    font-size: 24px;
-  }
   .sobre .sobre-textos p {
     font-size: 15px;
   }
 }
 .servicos-container {
   background-color: #1f1f1f;
-  padding-bottom: 38px;
+  padding-bottom: 40px;
 }
 .servicos-container .serviços-textos {
   text-align: center;
   justify-content: center;
-  padding: 35px;
 }
 .servicos-container .serviços-textos h1 {
-  font-size: 45px;
   color: #ffffff;
-  padding-bottom: 12px;
 }
 .servicos-container .serviços-textos p {
   font-size: 18px;
   color: #e0e0e0;
+  padding-bottom: 20px;
 }
 .servicos-container .serviços-grid {
   display: flex;
@@ -555,17 +510,13 @@ header .header-button a:hover {
 @media screen and (max-width: 1024px) {
   .servicos-container {
     background-color: #1f1f1f;
-    padding-bottom: 30px;
   }
   .servicos-container .serviços-textos {
     text-align: center;
     justify-content: center;
-    padding: 35px;
   }
   .servicos-container .serviços-textos h1 {
-    font-size: 36px;
     color: #ffffff;
-    padding-bottom: 12px;
   }
   .servicos-container .serviços-textos p {
     font-size: 16px;
@@ -636,9 +587,6 @@ header .header-button a:hover {
   }
 }
 @media screen and (max-width: 811px) {
-  .serviços .servicos-container .serviços-textos h1 {
-    font-size: 28px;
-  }
   .serviços .servicos-container .serviços-textos p {
     font-size: 16px;
   }
@@ -708,9 +656,6 @@ header .header-button a:hover {
   }
 }
 @media screen and (max-width: 589px) {
-  .serviços .servicos-container .serviços-textos h1 {
-    font-size: 28px;
-  }
   .serviços .servicos-container .serviços-textos p {
     font-size: 16px;
   }
@@ -779,9 +724,6 @@ header .header-button a:hover {
   }
 }
 @media screen and (max-width: 545px) {
-  .serviços .servicos-container .serviços-textos h1 {
-    font-size: 25px;
-  }
   .serviços .servicos-container .serviços-textos p {
     font-size: 15px;
   }
@@ -844,28 +786,26 @@ header .header-button a:hover {
 }
 .localizacao {
   background-color: #1f1f1f;
-  height: 47em;
+  height: 42.5em;
 }
 .localizacao .localizacao-textos {
   text-align: center;
   justify-content: center;
 }
 .localizacao .localizacao-textos h1 {
-  padding-top: 45px;
-  padding-bottom: 15px;
-  font-size: 38px;
   color: #ffffff;
 }
 .localizacao .localizacao-textos p {
-  padding-bottom: 38px;
+  padding-bottom: 20px;
   font-size: 18px;
   color: #e0e0e0;
 }
 .localizacao .localizacao-textos #localizacao-textos-p {
-  padding-top: 30px;
-  padding-bottom: 38px;
+  padding-bottom: 0;
+  margin-bottom: 0;
   font-size: 20px;
   color: #e0e0e0;
+  padding-top: 15px;
 }
 
 .line {
@@ -875,9 +815,6 @@ header .header-button a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .localizacao .localizacao-textos h1 {
-    font-size: 28px;
-  }
   .localizacao .localizacao-textos p {
     font-size: 16px;
   }
@@ -885,12 +822,9 @@ header .header-button a:hover {
     font-size: 18px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 488px) {
   .localizacao {
     padding: 0;
-  }
-  .localizacao .localizacao-textos h1 {
-    font-size: 28px;
   }
   .localizacao .localizacao-textos p {
     font-size: 16px;
@@ -900,16 +834,14 @@ header .header-button a:hover {
   }
 }
 .contato {
-  padding-bottom: 5em;
+  padding-bottom: 2.5em;
   background-color: #000000;
 }
 .contato .contato-h1 {
   padding-bottom: 60px;
 }
 .contato .contato-h1 h1 {
-  padding-top: 45px;
   padding-bottom: 10px;
-  font-size: 40px;
   text-align: center;
   color: #ffffff;
 }
@@ -923,7 +855,7 @@ header .header-button a:hover {
 .contato .contato-container {
   display: flex;
   justify-content: space-between;
-  gap: 2em;
+  gap: 4em;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2em;
@@ -990,6 +922,11 @@ header .header-button a:hover {
   background-color: rgb(71, 4, 4);
 }
 
+@media screen and (min-width: 1024px) {
+  .container-forms form {
+    margin-left: 3em;
+  }
+}
 @media screen and (max-width: 660px) {
   .contato-container {
     display: flex;

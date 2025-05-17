@@ -1,10 +1,26 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800 !important;
+}
+
+h1 {
+  padding-top: 30px;
+}
+
+@media screen and (min-width: 811px) {
+  h1 {
+    font-size: 40px;
   }
 
-  h1,h2,h3 {
-    font-weight: 800 !important;
+  @media screen and (max-width: 810px) {
+    h1 {
+      font-size: 30px;
+    }
   }
-
- 
+}

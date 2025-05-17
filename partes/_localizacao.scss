@@ -1,29 +1,27 @@
 .localizacao {
   background-color: $background-gray;
-  height: 47em;
+  height: 42.5em;
 
   .localizacao-textos {
     text-align: center;
     justify-content: center;
 
     h1 {
-      padding-top: 45px;
-      padding-bottom: 15px;
-      font-size: 38px;
       color: $white;
     }
 
     p {
-      padding-bottom: 38px;
+      padding-bottom: 20px;
       font-size: 18px;
       color: $white-subtitulo;
     }
 
     #localizacao-textos-p {
-      padding-top: 30px;
-      padding-bottom: 38px;
+      padding-bottom: 0;
+      margin-bottom: 0;
       font-size: 20px;
       color: $white-subtitulo;
+      padding-top: 15px;
     }
   }
 }
@@ -37,11 +35,8 @@
 @media screen and (max-width: 768px) {
 
   .localizacao {
-    .localizacao-textos {
-      h1 {
-        font-size: 28px;
-      }
 
+    .localizacao-textos {
       p {
         font-size: 16px;
       }
@@ -55,14 +50,12 @@
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 488px) {
 
   .localizacao {
     padding: 0;
+
     .localizacao-textos {
-      h1 {
-        font-size: 28px;
-      }
       p {
         font-size: 16px;
       }

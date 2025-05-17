@@ -1,23 +1,21 @@
 .galeria {
   background-color: $black-dark;
-  padding-bottom: 5em;
+  padding-bottom: 2.6em;
 
   .galeria-textos {
     position: relative;
     text-align: center;
-    padding: 30px;
     z-index: 2;
 
     h1 {
       color: $white;
-      font-size: 45px;
+      padding-top: 30px;
     }
 
     p {
       font-size: 18px;
       color: $white-subtitulo;
-      margin-top: 8px;
-      padding-bottom: 15px;
+      padding-bottom: 20px;
     }
 
     .galeria-bg-title {
@@ -127,6 +125,7 @@
 
 
 @media (max-width: 576px) {
+
   .img-carrossel {
     max-width: 90vw;
   }

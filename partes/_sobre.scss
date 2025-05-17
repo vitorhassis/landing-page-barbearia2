@@ -2,12 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6em;
+  gap: 10em;
   background-color: #000000;
   color: white;
   padding: 5em 3em;
   flex-wrap: wrap; // evita quebra feia em telas médias
   padding-bottom: 15em;
+  margin-top: -1px;
 
   .sobre-img {
     position: relative;
@@ -25,7 +26,6 @@
     text-align: center;
 
     h1 {
-      font-size: 47px;
       margin-bottom: 20px;
     }
 
@@ -52,10 +52,6 @@
     .sobre-textos {
       max-width: 700px;
 
-      h1 {
-        font-size: 40px;
-      }
-
       p {
         font-size: 18px;
         padding-bottom: 2em;
@@ -78,7 +74,7 @@
       max-width: 95vw;
 
       h1 {
-        font-size: 28px;
+        font-size: 30px;
       }
 
       p {
@@ -98,10 +94,6 @@
 
     .sobre-textos {
       padding: 0 1em;
-
-      h1 {
-        font-size: 24px;
-      }
 
       p {
         font-size: 15px;
