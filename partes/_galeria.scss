@@ -23,7 +23,7 @@
       font-size: 150px;
       left: 67%;
       position: absolute;
-      top: 53%;
+      top: 63%;
       transform: translate(-50%, -50%);
       z-index: 0;
     }
@@ -39,7 +39,7 @@
   height: auto;
   image-rendering: auto;
   margin: 0 auto;
-  max-width: 85vw;
+  max-width: 8vw;
   width: 100%;
 }
 
@@ -47,7 +47,7 @@
 
 @media (min-width: 1201px) {
   .img-carrossel {
-    max-width: 600px;
+    max-width: 400px;
   }
 
   .carousel-control-prev-icon {
