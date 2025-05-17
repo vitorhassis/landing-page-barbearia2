@@ -345,18 +345,18 @@
 
     .info-hover {
       background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.356));
-      bottom: 0;
+      bottom: -2px;
       color: white;
       display: flex;
       flex-direction: column;
-      height: 222px;
+      height: 221px;
       justify-content: flex-end;
-      left: 3em;
+      left: 46px;
       opacity: 0;
       pointer-events: none;
       position: absolute;
       transition: opacity 0.3s ease;
-      width: 250px;
+      width: 252px;
 
       h3 {
         font-size: 18px;
