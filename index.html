@@ -191,7 +191,7 @@
       <section class="galeria" id="galeria">
         <div class="galeria-textos">
           <h1>Galeria</h1>
-          <p>Os cortes que mais saem.</p>
+          <p>Os cortes que mais saem. (passe para o lado)</p>
           <span class="galeria-bg-title">GALERIA</span>
         </div>
 
@@ -200,7 +200,7 @@
           class="carousel slide"
           data-bs-touch="true"
           data-bs-ride="carousel"
-          data-bs-interval="3000"
+          data-bs-interval="1500"
           data-bs-interval="false"
         >
           <div class="carousel-inner">
@@ -400,16 +400,21 @@
             const target = document.getElementById(id);
             const isActive = target.classList.contains("ativo");
 
+            if (isActive) {
+              document
+                .querySelectorAll(".info-hover")
+                .forEach((el) => el.classList.remove("ativo"));
+              return;
+            }
+
             document
               .querySelectorAll(".info-hover")
               .forEach((el) => el.classList.remove("ativo"));
-
-            if (!isActive) {
-              target.classList.add("ativo");
-            }
+            target.classList.add("ativo");
           });
         });
       </script>
+
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
