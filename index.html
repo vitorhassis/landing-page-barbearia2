@@ -199,7 +199,7 @@
           id="carouselMobile"
           class="carousel slide"
           data-bs-touch="true"
-          data-bs-ride="carousel"
+          data-bs-ride="false"
           data-bs-interval="false"
         >
           <div class="carousel-inner">
@@ -397,10 +397,15 @@
           btn.addEventListener("click", () => {
             const id = btn.getAttribute("data-target");
             const target = document.getElementById(id);
-            document.querySelectorAll(".info-hover").forEach((el) => {
-              if (el !== target) el.classList.remove("ativo");
-            });
-            target.classList.toggle("ativo");
+            const isActive = target.classList.contains("ativo");
+
+            document
+              .querySelectorAll(".info-hover")
+              .forEach((el) => el.classList.remove("ativo"));
+
+            if (!isActive) {
+              target.classList.add("ativo");
+            }
           });
         });
       </script>
