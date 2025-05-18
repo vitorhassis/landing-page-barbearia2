@@ -296,7 +296,7 @@ p {
   padding-bottom: 20px;
 }
 .galeria .galeria-textos .galeria-bg-title {
-  color: rgba(69, 68, 68, 0.1568627451);
+  color: rgba(69, 68, 68, 0.1960784314);
   font-size: 150px;
   left: 67%;
   position: absolute;
@@ -362,7 +362,7 @@ p {
     right: 5em;
   }
   .galeria .galeria-bg-title {
-    color: rgba(69, 68, 68, 0.1568627451);
+    color: rgba(69, 68, 68, 0.1960784314);
     font-size: 10px;
     left: 67%;
     position: absolute;
@@ -372,6 +372,11 @@ p {
   }
 }
 @media (max-width: 768px) {
+  .galeria .galeria-textos .galeria-bg-title {
+    font-size: 70px;
+    top: 43%;
+    left: 50%;
+  }
   .img-carrossel {
     max-width: 58vw;
   }
@@ -964,7 +969,7 @@ h1 {
     color: white;
     display: flex;
     flex-direction: column;
-    height: 221px;
+    height: 222px;
     justify-content: flex-end;
     left: 46px;
     opacity: 0;

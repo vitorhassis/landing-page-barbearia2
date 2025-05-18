@@ -113,6 +113,17 @@
 }
 
 @media (max-width: 768px) {
+
+  .galeria {
+    .galeria-textos {
+      .galeria-bg-title {
+        font-size: 70px;
+        top: 43%;
+        left: 50%;
+      }
+    }
+  }
+
   .img-carrossel {
     max-width: 58vw;
   }
