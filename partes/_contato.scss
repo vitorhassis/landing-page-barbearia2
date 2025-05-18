@@ -85,7 +85,9 @@
         }
 
         button {
-          align-self: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           background-color: $red-button;
           border: none;
           border-radius: 50px;
@@ -93,7 +95,11 @@
           cursor: pointer;
           font-family: "Sora", sans-serif;
           font-weight: 800;
-          padding: 10px;
+          font-size: 15px;
+          height: 40px;
+          padding: 0 24px;
+          min-width: fit-content;
+          white-space: nowrap;
 
           &:hover {
             background-color: rgb(71, 4, 4);
@@ -148,17 +154,21 @@
         }
 
         button {
-          align-self: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           background-color: $red-button;
           border: none;
-          border-radius: 20px;
+          border-radius: 50px;
           color: $white;
           cursor: pointer;
           font-family: "Sora", sans-serif;
           font-weight: 800;
+          font-size: 15px;
           height: 40px;
-          width: 180px;
-
+          padding: 0 24px;
+          min-width: fit-content;
+          white-space: nowrap;
 
           &:hover {
             background-color: rgb(71, 4, 4);
@@ -207,16 +217,21 @@
         }
 
         button {
-          align-self: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           background-color: $red-button;
           border: none;
-          border-radius: 20px;
+          border-radius: 50px;
           color: $white;
           cursor: pointer;
           font-family: "Sora", sans-serif;
           font-weight: 800;
+          font-size: 15px;
           height: 40px;
-          width: 180px;
+          padding: 0 24px;
+          min-width: fit-content;
+          white-space: nowrap;
 
           &:hover {
             background-color: rgb(71, 4, 4);
@@ -231,3 +246,4 @@ a[href^="tel"] {
   color: $white-subtitulo !important;
   text-decoration: none !important;
 }
+
