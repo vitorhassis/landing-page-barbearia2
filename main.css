@@ -869,7 +869,7 @@ h1 {
     color: white;
     display: flex;
     flex-direction: column;
-    height: 310px;
+    height: 312px;
     justify-content: flex-end;
     left: 4.55em;
     opacity: 0;
@@ -926,7 +926,7 @@ h1 {
     width: 33px;
   }
   .serviços .servicos-container .info-hover {
-    height: 310px;
+    height: 312px;
     left: 0.7em;
     width: 350px;
   }
@@ -970,7 +970,7 @@ h1 {
     color: white;
     display: flex;
     flex-direction: column;
-    height: 222px;
+    height: 224px;
     justify-content: flex-end;
     left: 46px;
     opacity: 0;
