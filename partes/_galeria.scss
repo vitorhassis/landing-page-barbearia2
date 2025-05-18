@@ -10,6 +10,7 @@
     h1 {
       color: $white;
       padding-top: 30px;
+       z-index: 3;
     }
 
     p {
@@ -25,7 +26,7 @@
       position: absolute;
       top: 63%;
       transform: translate(-50%, -50%);
-      z-index: 0;
+       z-index: -1;
     }
   }
 }

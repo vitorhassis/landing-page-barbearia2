@@ -6,7 +6,6 @@ header {
   height: 15vh;
   justify-content: space-between;
   margin-bottom: -1px;
-  padding: 0 100px;
   padding-left: 0;
   padding-right: 2.3em;
   text-align: center;
@@ -15,12 +14,14 @@ header {
   #header-img {
     height: 15vh;
     margin-top: -1px;
+    margin-left: 150px;
     width: auto;
   }
 
   .header-icon-cell {
     display: flex;
     gap: 18px;
+    margin-right: 150px;
 
     i {
       font-size: 28px;
