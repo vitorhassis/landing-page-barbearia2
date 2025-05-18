@@ -227,3 +227,7 @@
   }
 }
 
+a[href^="tel"] {
+  color: $highlight !important; 
+  text-decoration: none !important;
+}

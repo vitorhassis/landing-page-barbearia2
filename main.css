@@ -245,6 +245,11 @@ a {
     background-color: rgb(71, 4, 4);
   }
 }
+a[href^=tel] {
+  color: #bb9867 !important;
+  text-decoration: none !important;
+}
+
 footer {
   background-color: #1f1f1f;
   padding: 1em;
