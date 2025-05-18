@@ -123,6 +123,7 @@ a {
   min-height: 120px;
 }
 .contato .contato-container .container-forms form button {
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,6 +136,7 @@ a {
   font-weight: 800;
   font-size: 15px;
   height: 40px;
+  width: 40px;
   padding: 0 24px;
   min-width: -moz-fit-content;
   min-width: fit-content;
