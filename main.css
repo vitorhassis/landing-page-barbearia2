@@ -246,7 +246,7 @@ a {
   }
 }
 a[href^=tel] {
-  color: #bb9867 !important;
+  color: #e0e0e0 !important;
   text-decoration: none !important;
 }
 
