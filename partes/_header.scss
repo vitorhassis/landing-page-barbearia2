@@ -3,25 +3,24 @@ header {
   background-color: $black-dark;
   box-sizing: border-box;
   display: flex;
-  height: 15vh;
   justify-content: space-between;
-  margin-bottom: -1px;
-  padding-left: 0;
-  padding-right: 2.3em;
-  text-align: center;
+  height: 15vh;
   width: 100%;
+  padding-right: 40px;
+  margin-bottom: -1px;
+  text-align: center;
 
   #header-img {
     height: 15vh;
-    margin-top: -1px;
-    margin-left: 150px;
     width: auto;
+    margin-top: -1px;
+    margin-left: 0;
   }
 
   .header-icon-cell {
     display: flex;
     gap: 18px;
-    margin-right: 150px;
+    margin-right: 0;
 
     i {
       font-size: 28px;
@@ -29,9 +28,8 @@ header {
     }
 
     a:hover i {
-    color: $red-light;
-  }
-
+      color: $red-light;
+    }
   }
 
   .header-button {
@@ -73,8 +71,14 @@ header {
 
 @media screen and (min-width: 768px) {
   header {
+    gap: 200px;
+
     .header-button {
       display: none;
+    }
+
+    #header-img {
+      margin-left: 0;
     }
   }
 }
@@ -87,23 +91,35 @@ header {
 
     #header-img {
       margin-left: 0;
-      margin-top: 0em;
+      margin-top: 0;
     }
   }
 }
 
 @media screen and (max-width: 480px) {
-  header {
-    padding-right: 1em;
 
+  header {
     #header-img {
-      margin-left: 0;
-      margin-top: 0;
+      width: 200px;
+      height: 160px;
+    }
+  }
+  .header-icon-cell {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
 
-    .header-icon-cell {
-      gap: 18px;
-      margin-right: 1em;
+    i {
+      font-size: 24px;
     }
   }
 }
+

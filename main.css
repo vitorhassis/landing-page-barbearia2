@@ -435,24 +435,23 @@ header {
   background-color: #000000;
   box-sizing: border-box;
   display: flex;
-  height: 15vh;
   justify-content: space-between;
-  margin-bottom: -1px;
-  padding-left: 0;
-  padding-right: 2.3em;
-  text-align: center;
+  height: 15vh;
   width: 100%;
+  padding-right: 40px;
+  margin-bottom: -1px;
+  text-align: center;
 }
 header #header-img {
   height: 15vh;
-  margin-top: -1px;
-  margin-left: 150px;
   width: auto;
+  margin-top: -1px;
+  margin-left: 0;
 }
 header .header-icon-cell {
   display: flex;
   gap: 18px;
-  margin-right: 150px;
+  margin-right: 0;
 }
 header .header-icon-cell i {
   font-size: 28px;
@@ -494,8 +493,14 @@ header .header-icon-cell a:hover {
   }
 }
 @media screen and (min-width: 768px) {
+  header {
+    gap: 200px;
+  }
   header .header-button {
     display: none;
+  }
+  header #header-img {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -504,20 +509,28 @@ header .header-icon-cell a:hover {
   }
   header #header-img {
     margin-left: 0;
-    margin-top: 0em;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 480px) {
-  header {
-    padding-right: 1em;
-  }
   header #header-img {
-    margin-left: 0;
-    margin-top: 0;
+    width: 200px;
+    height: 160px;
   }
-  header .header-icon-cell {
-    gap: 18px;
-    margin-right: 1em;
+  .header-icon-cell {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+  .header-icon-cell::-webkit-scrollbar {
+    display: none;
+  }
+  .header-icon-cell i {
+    font-size: 24px;
   }
 }
 .hero {
@@ -537,7 +550,7 @@ header .header-icon-cell a:hover {
   letter-spacing: 2px;
   line-height: 1.3;
   margin-bottom: 2rem;
-  max-width: 800px;
+  max-width: 90vw;
   text-align: center;
 }
 .hero .hero-title .highlight {
@@ -606,8 +619,9 @@ header .header-icon-cell a:hover {
     background: url("/assets/imagens/bannerTelasPequenas.png") no-repeat center center/cover;
   }
   .hero .hero-title {
-    font-size: 30px;
+    font-size: 27px;
     margin-top: 4em;
+    max-width: 100vw;
   }
   .hero .hero-p {
     font-size: 20px;
@@ -620,7 +634,24 @@ header .header-icon-cell a:hover {
 }
 @media screen and (max-width: 480px) {
   .hero .hero-title {
-    font-size: 27px;
+    font-size: 20px;
+    max-width: 95vw;
+    margin-top: 1em;
+  }
+  .hero .hero-p {
+    font-size: 18px;
+    max-width: 90vw;
+    padding-bottom: 1.5em;
+  }
+  .hero .hero-button a {
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .hero .hero-title {
+    font-size: 20px;
+    max-width: 95vw;
     margin-top: 1em;
   }
   .hero .hero-p {
