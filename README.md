@@ -2,7 +2,7 @@
 
 ## 📌 Sobre o projeto  
 
-Este é um projeto de landing page desenvolvido para uma **barbearia clássica**, criado totalmente do zero — desde o design no Figma até a implementação em código. O objetivo foi entregar um site moderno, responsivo e funcional, com foco na experiência do usuário e na apresentação dos serviços oferecidos.  
+Este é um projeto de landing page desenvolvido para uma **barbearia em Colorado-PR**, criada totalmente do zero — desde o design no Figma até a implementação em código. O objetivo foi entregar um site moderno, responsivo e funcional, com foco na experiência do usuário e na apresentação dos serviços oferecidos.  
 
 🔗 **Acesse o site:** [Ver projeto ao vivo](https://landing-page-barbearia2-khbbcugq5-vitorhassis-projects.vercel.app)  
 
